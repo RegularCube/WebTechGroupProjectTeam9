@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Skeleton Code</title>
+        <style>
+            body{
+                margin: none;
+                background-color: gray;
+            }
+
+            #wrapper{
+                width: 90%;
+                height: 80%;
+                margin: auto;
+                margin-top: 5%;
+                border: 5px solid black;
+                border-radius: 7px;
+                display: grid;
+                grid-template-columns: 3fr 2fr;
+                grid-template-rows: 4fr 1fr;
+                grid-gap: 1rem;
+            }
+
+            div{
+                text-align: center;
+            }
+            
+            #gameplay, #output-text, #input-text{
+                border: 1px solid black;
+                margin: 5px;
+            }
+
+
+            #output-text{
+                grid-row: span 2;
+                padding: 70% 0;
+            }
+
+            #gameplay{
+                display: grid;
+                grid-template-rows: 3fr 1fr;
+            }
+
+            #image, #prompt{
+                border: 1px solid black
+            }
+
+            #image{
+                padding: 25% 0;
+            }
+
+            #prompt{
+                padding: 7% 0;
+            }
+
+            #input-text{
+                padding: 7% 0;
+            }
+
+ 
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="gameplay">
+                <div id="image">
+                    Image/gameplay goes here
+                </div>
+                <div id="prompt">
+                    Player is given a prompt here
+                </div>
+            </div>
+            <div id="output-text">
+                Log of past prompts and instructions here <br>
+                Stats also appear here at the end
+            </div>
+            <div id="input-text">
+                Player responds to the text here
+            </div>
+            
+        </div>
+        
+    </body>
+</html>
