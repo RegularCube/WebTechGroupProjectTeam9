@@ -42,11 +42,33 @@
             #image, #prompt{
                 border: 1px solid black
             }
+            
+            .popup {
+			display: none;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: #ffffff;
+			padding: 20px;
+			border: 1px solid #cccccc;
+			box-shadow: 0px 0px 10px #aaaaaa;
+			z-index: 9999;
+            border-radius: 10px;
+		}
 
  
         </style>
     </head>
     <body>
+        <button onclick="showPopup()">Example Popup</button>
+        <div class="popup" id="popup">
+            <h2>Example Popup</h2>
+            <p>Stat 1: x</p>
+            <p>Stat 2: y</p>
+            <p>Stat 3: z</p>
+            <button onclick="hidePopup()">Close Popup</button>
+        </div>
         <div id="wrapper">
             <div id="gameplay">
                 <div id="image">
@@ -66,5 +88,14 @@
             
         </div>
         
+        <script>
+            function showPopup() {
+                document.getElementById("popup").style.display = "block";
+            }
+    
+            function hidePopup() {
+                document.getElementById("popup").style.display = "none";
+            }
+        </script>
     </body>
 </html>
