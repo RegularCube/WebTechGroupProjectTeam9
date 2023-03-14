@@ -1,6 +1,3 @@
-# **WebTechGroupProjectTeam9**
-## game ideas:
-- pilgrimage/outdoor survival game - like Oragon Trail/The Trail/Firewatch
-- start-up business/entrepreneur game
-- criminal game/ escape police - like GTA
-- horror escape game (might be too similar to other teams from lecture demonstations)
+# **Web Technologies Group Project: Team 9**
+
+This repo contains the code for our project, a text-adventure game played in the browser, centering around survival, exploration, and a man's search for answers in the wilderness...
