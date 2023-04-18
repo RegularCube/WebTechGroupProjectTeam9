@@ -93,11 +93,6 @@
             background-color: #ddd;
         }
 
-
-
-
-
-
         .popup-overlay {
             position: fixed;
             top: 0;
@@ -118,12 +113,6 @@
             border-radius: 5px;
             z-index: 9999;
         }
-
-
-
-
-
-
 
         #accessibility-panel {
             position: fixed;
@@ -176,14 +165,6 @@
         <button id="close-accessibility-panel">Close</button>
     </div>
 
-
-
-
-
-
-
-
-
     <div id="wrapper">
         <div id="gameplay">
             <div id="image">
@@ -205,45 +186,9 @@
             <input type="text" id="custom-response" placeholder="Type your response here">
             <button onclick="handleCustomResponse()">Submit</button>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
-
-
     <script>
-
-
-// for the first popup notepad 
-
-
+        // for the first popup notepad 
         function showPopup() {
             document.getElementById("popup").style.display = "block";
         }
@@ -252,21 +197,7 @@
             document.getElementById("popup").style.display = "none";
         }
 
-
-
-
-
-
-
-
-
-
-
         //player response  js 
-
-
-
-
         function handleResponse(response) {
             // goes on with thw players chose 
             console.log('Player chose:', response);
@@ -288,9 +219,7 @@
             }
         }
 
-
         //timer js  
-
         const checkTimeButton = document.getElementById('check-time-button');
         const timeRemainingElement = document.getElementById('time-remaining');
         let timeRemaining = 300; // 5 minutes in seconds
@@ -299,7 +228,6 @@
         function showGameOverPopup() {
             clearInterval(timerInterval); // Stop updating the timer
             alert('Time is up! You have died.');
-
         }
 
         function updateTimerDisplay() {
@@ -330,15 +258,7 @@
         // will show the remaining time when the button is clicked 
         checkTimeButton.addEventListener('click', checkTimeRemaining);
 
-
-
-
-
-
-
-
         //notepad 
-
         const noteInput = document.getElementById('note-input');
         const saveNoteButton = document.getElementById('save-note-button');
         const notesList = document.getElementById('notes-list');
@@ -382,12 +302,7 @@
 
         saveNoteButton.addEventListener('click', saveNote);
 
-
-
         //popup button 
-
-
-
         const openFeaturePopupButton = document.getElementById('open-feature-popup');
         const closeFeaturePopupButton = document.getElementById('close-feature-popup');
         const featurePopup = document.getElementById('feature-popup');
@@ -410,12 +325,7 @@
         openFeaturePopupButton2.addEventListener('click', () => openPopup(featurePopup2));
         closeFeaturePopupButton2.addEventListener('click', () => closePopup(featurePopup2));
 
-
-
-
         // the accessablity button js 
-
-
         const openAccessibilityPanelButton = document.getElementById('open-accessibility-panel');
         const closeAccessibilityPanelButton = document.getElementById('close-accessibility-panel');
         const accessibilityPanel = document.getElementById('accessibility-panel');
@@ -424,7 +334,6 @@
         const backgroundColorInput = document.getElementById('background-color');
         const fontSelect = document.getElementById('font-select');
         const gameContent = document.getElementById('wrapper');
-
 
         function openAccessibilityPanel() {
             accessibilityPanel.style.display = 'block';
@@ -441,22 +350,12 @@
             gameContent.style.fontFamily = fontSelect.value;
         }
 
-
         openAccessibilityPanelButton.addEventListener('click', openAccessibilityPanel);
         closeAccessibilityPanelButton.addEventListener('click', closeAccessibilityPanel);
         textSizeInput.addEventListener('input', applyAccessibilityOptions);
         textColorInput.addEventListener('input', applyAccessibilityOptions);
         backgroundColorInput.addEventListener('input', applyAccessibilityOptions);
         fontSelect.addEventListener('change', applyAccessibilityOptions);
-
-
-
-
-
-
-
-
-
     </script>
 </body>
 
