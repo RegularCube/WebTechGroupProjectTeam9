@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <!-- This isn't the actual main game screen but that parts which are needed to be added so the character customisation can work -->
+        <!--  -->
+        <title>Jungle Escape</title>
+        
+    </head>
+    <body onload="receive();">
+
+        <h1>Time Remaining: <span id="timeLeft">?</span></h1>
+
+
+        <!-- JS below -->
+
+        <script>
+            //timer related variables and event listener
+            window.addEventListener('load', startTimer);
+            var timeLeft = 60;
+            var timer
+
+            //variables for character customisation
+            var playerName; //player name can be any type of text
+            var playerHairColour; //player hair colour can be: grey, brown, black, blue, red, purple, ginger, blonde, green
+            var playerHeight; //player can have the height: small, average, tall
+
+            //method for recieving character customisations
+
+            function receive() {
+                playerName = sessionStorage.getItem('playerName');
+                playerHairColour = sessionStorage.getItem('playerHairColour');
+                playerHeight = sessionStorage.getItem('playerHeight');
+
+                //following lines in method only needed for testing, remove once incoporated into product
+
+                console.log(playerName);
+                console.log(playerHairColour);
+                console.log(playerHeight);
+                
+                document.body.innerHTML += '<p>Your name is ' + playerName + '</p>';
+                document.body.innerHTML += '<p>Your hair colour is ' + playerHairColour + '</p>';
+                document.body.innerHTML += '<p>Your height is ' + playerHeight + '</p>';
+            }
+
+            //timer methods
+
+            function startTimer() {
+                
+                document.getElementById('timeLeft').innerHTML = timeLeft;
+                timer = setInterval(decreaseTime, 1000);
+            }
+
+            function decreaseTime() {
+                if (timeLeft>0) {
+                    timeLeft--;
+                    document.getElementById('timeLeft').innerHTML = timeLeft;
+                } else {
+                    clearInterval(timer);
+                    document.getElementById('timeLeft').innerHTML = 'Time Up';
+                    //add method here to be taken to end screen with indication that time ran out.
+                }
+            }
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Jungle Escape</title>
+
+    </head>
+    <body>
+        <h1>This is the character customisation screen</h1>
+        <label for="playerName">Character Name: </label>
+        <input type="text" id="playerName" >
+        <br>
+        <label for="playerHairColour">Character Hair Colour: </label>
+        <!-- player hair colour can be: grey, brown, black, blue, red, purple, ginger, blonde, green -->
+        <select id="playerHairColour">
+            <option value="grey">Grey</option>
+            <option value="brown">Brown</option>
+            <option value="black">Black</option>
+            <option value="blue">Blue</option>
+            <option value="red">Red</option>
+            <option value="purple">Purple</option>
+            <option value="ginger">Ginger</option>
+            <option value="blonde">Blonde</option>
+            <option value="green">Green</option>
+        </select>
+        <br>
+        <label for="playerHairColour">Character Height: </label>
+        <!-- player hair colour can be: grey, brown, black, blue, red, purple, ginger, blonde, green -->
+        <select id="playerHeight">
+            <option value="short">Short</option>
+            <option value="average">Average</option>
+            <option value="tall">Tall</option>
+        </select>
+        <br>
+
+        <button onclick="send();">Go!</button>
+        
+        <!-- JS below -->
+
+        <script>
+            function send() {
+                
+                var playerName = document.getElementById('playerName').value;
+                var playerHairColour = document.getElementById('playerHairColour').value;
+                var playerHeight = document.getElementById('playerHeight').value;
+                
+                sessionStorage.setItem('playerName',playerName);
+                sessionStorage.setItem('playerHairColour', playerHairColour);
+                sessionStorage.setItem('playerHeight', playerHeight);
+                
+                window.open('mainGameScreen.html','_self');
+                
+            }
+        </script>
+    </body>
+</html>
