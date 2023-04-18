@@ -7,6 +7,7 @@
     </head>
     <body onload="receive();">
 
+        <!-- Used for testing -->
         <h1>Time Remaining: <span id="timeLeft">?</span></h1>
 
 
@@ -15,13 +16,14 @@
         <script>
             //timer related variables and event listener
             window.addEventListener('load', startTimer);
-            var timeLeft = 60;
+            var timeLeft = 60; //default amount
             var timer
 
             //variables for character customisation
             var playerName; //player name can be any type of text
             var playerHairColour; //player hair colour can be: grey, brown, black, blue, red, purple, ginger, blonde, green
             var playerHeight; //player can have the height: small, average, tall
+            var difficulty;
 
             //method for recieving character customisations
 
@@ -29,12 +31,28 @@
                 playerName = sessionStorage.getItem('playerName');
                 playerHairColour = sessionStorage.getItem('playerHairColour');
                 playerHeight = sessionStorage.getItem('playerHeight');
+                difficulty = sessionStorage.getItem('difficulty');
+
+                switch(difficulty) {
+                    case "easy":
+                        timeLeft = 240;
+                        break;
+                    case "medium":
+                        timeLeft = 120;
+                        break;
+                    case "hard":
+                        timeLeft = 45
+                        break;
+                    default:
+                        timeLeft = 120;
+                }
 
                 //following lines in method only needed for testing, remove once incoporated into product
 
                 console.log(playerName);
                 console.log(playerHairColour);
                 console.log(playerHeight);
+                console.log(difficulty)
                 
                 document.body.innerHTML += '<p>Your name is ' + playerName + '</p>';
                 document.body.innerHTML += '<p>Your hair colour is ' + playerHairColour + '</p>';
