@@ -302,15 +302,6 @@
 
         saveNoteButton.addEventListener('click', saveNote);
 
-        //popup button 
-        const openFeaturePopupButton = document.getElementById('open-feature-popup');
-        const closeFeaturePopupButton = document.getElementById('close-feature-popup');
-        const featurePopup = document.getElementById('feature-popup');
-
-        const openFeaturePopupButton2 = document.getElementById('open-feature-popup2');
-        const closeFeaturePopupButton2 = document.getElementById('close-feature-popup2');
-        const featurePopup2 = document.getElementById('feature-popup2');
-
         function openPopup(popup) {
             popup.style.display = 'block';
         }
@@ -318,12 +309,6 @@
         function closePopup(popup) {
             popup.style.display = 'none';
         }
-
-        openFeaturePopupButton.addEventListener('click', () => openPopup(featurePopup));
-        closeFeaturePopupButton.addEventListener('click', () => closePopup(featurePopup));
-
-        openFeaturePopupButton2.addEventListener('click', () => openPopup(featurePopup2));
-        closeFeaturePopupButton2.addEventListener('click', () => closePopup(featurePopup2));
 
         // the accessablity button js 
         const openAccessibilityPanelButton = document.getElementById('open-accessibility-panel');
