@@ -183,7 +183,7 @@
 
             function setElementsOnPage(sceneDict) {
                 //clear prompts
-                clearPrompts();
+                clearScene();
 
                 //set image
                 updateImage(sceneDict);
@@ -217,13 +217,13 @@
                 }
                 sessionStorage.setItem('sceneID',next);
                 setUpScene();
-                
-                
             }
 
-            function clearPrompts() {
+            function clearScene() {
                 promptBox = document.getElementById("promptBox");
                 promptBox.innerHTML = null;
+                sceneText = document.getElementById("sceneText");
+                sceneText.innerHTML = null;
             }
 
             function updateImage(sceneDict) {
