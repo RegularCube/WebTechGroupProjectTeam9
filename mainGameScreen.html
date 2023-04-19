@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Jungle Escape</title>
 
-        <script type="text/javascript" src="storyLine.js"></script>
+        <script type="text/javascript" src="storyData.js"></script>
 
         <style>
             .test {
@@ -138,7 +139,6 @@
     
                 <div id="promptBox" class="test">
                     <h1>promptBox</h1>
-                    <p id="prompText"></p>
                 </div>
 
             </div>
@@ -146,7 +146,7 @@
         </div>
 
         <script type="text/javascript" src="popups.js"></script>
-        <script type="text/javascript" src="scene.js"></script>
+        <script type="text/javascript" src="typewriter.js"></script>
 
         <script>
             // get character customisation
@@ -155,8 +155,7 @@
             // sessionStorage.getItem('playerHeight');
 
             // game logic
-            // setUpScene();
-            run();
+            setUpScene();
 
             function reset() {
                 sceneID = "start";
@@ -241,7 +240,7 @@
                     text = text[0]; //remove later
                 }
 
-                document.getElementById("sceneText").innerHTML = text;
+                typeWriter(text, "sceneText", speed=9);
             }
 
             function updatePrompts(sceneDict) {
