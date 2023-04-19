@@ -4,8 +4,6 @@ Your mind claws at these images but they don\'t come into focus, don\'t resolve,
 
 Birdsong flits through the trees. You see evergreen branches swaying in a morning breeze high above you. You are awake.`;
 
-var choices = ["Look around", "Get up"]
-
 function typeWriter(txt, element_id, speed) {
 	var i = 0;
 
@@ -17,23 +15,32 @@ function typeWriter(txt, element_id, speed) {
     	})();
 }
 
-
+class ChoiceOption {
+	constructor(button_text, next_scene){
+		this.button_text = button_text;
+		this.next_scene = next_scene;
+	}
+}
 
 class Scene {
-	constructor(prompt_text, choices, next_scenes) {
+	constructor(prompt_text, choice_options) {
 		this.prompt_text = prompt_text;
-		this.choices = choices;
-		this.next_scenes = next_scenes;
+		this.choice_options = choice_options;
 	}
 
 	display() {	
-		typeWriter(this.prompt_text, "prompt-text", 20);
-		document.getElementById("input-text").innerHTML = choices;	
+		typeWriter(this.prompt_text, "sceneText", 20);
+		console.log(this.choice_options.length);
+		for(let i=0; i < this.choice_options.length; i++) {
+			console.log(":)");
+			document.getElementById("promptBox").innerHTML += "<button>" + this.choice_options[i].button_text + "</button>";	
+		}
 	}
-
 }
 
 function run(){
-	s = new Scene(text,2,3);
+	choice1 = new ChoiceOption("I'm gonna die", 0)
+	choice2 = new ChoiceOption("I got this", 0)
+	s = new Scene(text,[choice1, choice2]);
 	s.display();
 }
