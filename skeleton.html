@@ -130,7 +130,7 @@
 </head>
 
 <body onLoad=run()>
-    <!-- this is for the noteook -->
+    <!-- this is for the notebook -->
     <button onclick="showPopup()">NoteBook</button>
     <div class="popup" id="popup">
         <h2>Notebook</h2>
@@ -140,15 +140,12 @@
         <button onclick="hidePopup()">Close Popup</button>
     </div>
 
-<!-- timer button -->
-
+    <!-- timer button -->
     <button id="check-time-button">Check Time Remaining</button>
     <p id="time-remaining" style="display: none;"></p>
     
-<!-- accessability pane outlined in the requirements -->
-
+    <!-- accessability pane outlined in the requirements -->
     <button id="open-accessibility-panel">Accessibility</button>
-
     <div id="accessibility-panel" style="display: none;">
         <h2>Accessibility Options</h2>
         <label for="text-size">Text Size:</label>
@@ -156,7 +153,7 @@
         <label for="text-color">Text Color:</label>
         <input type="color" id="text-color" value="#000000">
         <label for="background-color">Background Color:</label>
-        <input type="color" id="background-color" value="#FFFFFF">
+        <input type="color" id="background-color" value="#808080">
         <label for="font-select">Font:</label>
         <select id="font-select">
             <option value="Arial">Arial</option>
@@ -175,18 +172,9 @@
                 <p id="prompt-text"></p>
             </div>
         </div>
-        <div id="output-text">
-            Log of past prompts and instructions here <br>
-            Stats also appear here at the end
-        </div>
+        <div id="output-text"></div>
         <!-- for the input text have pre made buttons and an area to type the text -->
-        <div id="input-text">
-            <button onclick="handleResponse('go left')">Go Left</button>
-            <button onclick="handleResponse('hide')">Hide</button>
-            <button onclick="handleResponse('pick up')">Pick Up</button>
-            <input type="text" id="custom-response" placeholder="Type your response here">
-            <button onclick="handleCustomResponse()">Submit</button>
-        </div>
+        <div id="input-text"></div>
     </div>
     <script>
         // for the first popup notepad 
@@ -208,19 +196,7 @@
             outputText.innerHTML += 'Player chose: ' + response + '<br>';
         }
 
-        function handleCustomResponse() {
-            const customResponseInput = document.getElementById('custom-response');
-            const customResponse = customResponseInput.value;
-
-            if (customResponse) {
-                handleResponse(customResponse);
-                customResponseInput.value = ''; // clear the input feild 
-            } else {
-                alert('Please enter a custom response');
-            }
-        }
-
-        //timer js  
+        //timer js
         const checkTimeButton = document.getElementById('check-time-button');
         const timeRemainingElement = document.getElementById('time-remaining');
         let timeRemaining = 300; // 5 minutes in seconds
