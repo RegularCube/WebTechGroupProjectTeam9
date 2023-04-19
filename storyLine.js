@@ -1,4 +1,4 @@
-var storyline = {
+var storyLine = {
     "start":{
         "id": "start",
         "title": "The Beginning",
