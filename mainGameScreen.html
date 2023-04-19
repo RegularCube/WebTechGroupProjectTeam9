@@ -138,6 +138,7 @@
     
                 <div id="promptBox" class="test">
                     <h1>promptBox</h1>
+                    <p id="prompText"></p>
                 </div>
 
             </div>
@@ -145,6 +146,7 @@
         </div>
 
         <script type="text/javascript" src="popups.js"></script>
+        <script type="text/javascript" src="scene.js"></script>
 
         <script>
             // get character customisation
@@ -153,7 +155,8 @@
             // sessionStorage.getItem('playerHeight');
 
             // game logic
-            setUpScene();
+            // setUpScene();
+            run();
 
             function reset() {
                 sceneID = "start";
