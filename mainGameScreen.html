@@ -28,8 +28,6 @@
 
                 flex-direction: column;
                 align-items: stretch;
-
-                background-color: white;
             }
 
             #topBanner {
@@ -64,16 +62,37 @@
             }
             #imageBox > img {
                 width: 100%;
+                object-fit: cover;
             }
 
             #descriptionBox{
                 background-color: salmon;
                 flex-grow: 1;
+                overflow: scroll;
             }
 
             #promptBox {
                 background-color:palegreen;
                 min-height: 200px; 
+            }
+
+            #promptBox {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                gap: 2px;
+            }
+            .choice {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+
+            }
+            .choice > button {
+                
+            }
+            .choice > p {
+                
             }
 
             .popup {
@@ -89,7 +108,6 @@
             z-index: 9999;
             border-radius: 10px;
             }
-
 
             #notebook {
                 width: 300px;
@@ -180,7 +198,7 @@
             <button onclick="reset()">reset</button>
         </div>
 
-        <div id="wrapper" class: "text">
+        <div id="gameWrapper" class="text">
 
             <div id="leftCol">
 
