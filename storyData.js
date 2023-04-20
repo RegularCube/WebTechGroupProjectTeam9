@@ -7,12 +7,12 @@ var storyLine = {
         "choices": [
             {
                 "text": "I'm going to die!",
-                "emoji": "😱",
+                "emoji": "&#128561;",
                 "next": "ded"
             },
             {
                 "text": "I'm going to survive! I'm going to find help!",
-                "emoji": "😎",
+                "emoji": "&#128526;",
                 "next": "junglePath"
             }
         ]
@@ -26,12 +26,12 @@ var storyLine = {
         "choices": [
             {
                 "text": "Continue down path",
-                "emoji": "😱",
+                "emoji": "&#128561;",
                 "next": "waterfallOverlook"
             },
             {
                 "text": "Return to camp",
-                "emoji": "🏕️",
+                "emoji": "&#127957;",
                 "next": "returnToCampDed"
             }
 
@@ -45,12 +45,12 @@ var storyLine = {
         "choices": [
             {
                 "text": "Quickly but carefully traverse down the jungle slope to the waterfall",
-                "emoji": "🏃",
+                "emoji": "&#127939;",
                 "next": "waterfallOasis"
             },
             {
                 "text": "Climb up the branches to the higher vantage point",
-                "emoji": "🏞️",
+                "emoji": "&#127966;",
                 "next": "slipperyBranchOverlook"
             }
         ]
@@ -63,7 +63,7 @@ var storyLine = {
         "choices": [
             {
                 "text": "Climb back down to the base of the tree.",
-                "emoji": "🌳",
+                "emoji": "&#127795;",
                 "next": ["waterfallOverlook", "fallingFromTree"]
             }
         ]
@@ -76,7 +76,7 @@ var storyLine = {
         "choices": [
             {
                 "text": "Continue falling.",
-                "emoji": "🌳",
+                "emoji": "&#127795;",
                 "next": ["fellFromTree", "fellFromTreeAndDed"]
             }
         ]
@@ -90,7 +90,7 @@ var storyLine = {
         "choices": [
             {
                 "text": "Continue",
-                "emoji": "💀",
+                "emoji": "&#128128;",
                 "next": "stats"
             }
         ]
@@ -117,17 +117,17 @@ var storyLine = {
         "choices": [
             {
                 "text": "Explore behind the waterfall",
-                "emoji": "💦",
+                "emoji": "&#128166;",
                 "next": "exploringBehindWaterfall"
             },
             {
                 "text": "Create a raft and float down the river",
-                "emoji": "🛶",
+                "emoji": "&#128758;",
                 "next": "confusedRaftBuilder"
             },
             {
                 "text": "Create ropes from the vines",
-                "emoji": "🪢",
+                "emoji": "&#129698;",
                 "next": "waterfallOasisWithRopes"
             }
         ]
@@ -140,7 +140,7 @@ var storyLine = {
         "choices": [
             {
                 "text": "Continue",
-                "emoji": "🛶",
+                "emoji": "&#128758;",
                 "next": "waterfallOasis"
             }
         ]
@@ -153,22 +153,22 @@ var storyLine = {
         "choices": [
             {
                 "text": "Explore behind the waterfall",
-                "emoji": "💦",
+                "emoji": "&#128166;",
                 "next": "exploringBehindWaterfallWithRopes"
             },
             {
                 "text": "Create a raft and float down the river",
-                "emoji": "🛶",
+                "emoji": "&#128758;",
                 "next": "floatOffWaterfallAndDed"
             },
             {
                 "text": "Attempt to catch fish with the ropes",
-                "emoji": "🎣",
+                "emoji": "&#127907;",
                 "next": "fishing"
             },
             {
                 "text": "Attempt to climb the waterfall with the ropes",
-                "emoji": "🧗",
+                "emoji": "&#129495;",
                 "next": "climbingWaterfall"
             },
         ]
@@ -181,7 +181,7 @@ var storyLine = {
         "choices": [
             {
                 "text": "Continue",
-                "emoji": "🐊",
+                "emoji": "&#128010;",
                 "next": "stats"
             }
         ]
@@ -205,12 +205,12 @@ var storyLine = {
         "choices": [
             {
                 "text": "Try Again",
-                "emoji": "🎣",
+                "emoji": "&#127907;",
                 "next": "fishing"
             },
             {
                 "text": "Give up",
-                "emoji": "😔",
+                "emoji": "&#128532;",
                 "next": "waterfallOasisWithRopes"
             }
         ]
@@ -223,12 +223,12 @@ var storyLine = {
         "choices": [
             {
                 "text": "Explore the cave",
-                "emoji": "🕳️",
+                "emoji": "&#128371;",
                 "next": ["caveFallDed","cave"]
             },
             {
                 "text": "Return to the oasis",
-                "emoji": "🏞️",
+                "emoji": "&#127966;",
                 "next": "waterfallOasis"
             }
         ]
@@ -241,12 +241,12 @@ var storyLine = {
         "choices": [
             {
                 "text": "Explore the cave",
-                "emoji": "🕳️",
+                "emoji": "&#128371;",
                 "next": "caveRopesDed"
             },
             {
                 "text": "Return to the oasis",
-                "emoji": "🏞️",
+                "emoji": "&#127966;",
                 "next": "waterfallOasisWithRopes"
             }
         ]
@@ -259,7 +259,7 @@ var storyLine = {
         "choices": [
             {
                 "text": "Continue",
-                "emoji": "🍽️",
+                "emoji": "&#127869;",
                 "next": "stats"
             }
         ]
@@ -272,7 +272,7 @@ var storyLine = {
         "choices": [
             {
                 "text": "Continue",
-                "emoji": "💀",
+                "emoji": "&#128128;",
                 "next": "stats"
             }
         ]
@@ -285,12 +285,12 @@ var storyLine = {
         "choices": [
             {
                 "text": "Use the torch",
-                "emoji": "🔦",
+                "emoji": "&#128294;",
                 "next": "caveWithTorch"
             },
             {
                 "text": "Leave the cave",
-                "emoji": "🏞️",
+                "emoji": "&#127966;",
                 "next": "exploringBehindWaterfall"
             }
         ]
@@ -303,7 +303,7 @@ var storyLine = {
         "choices": [
             {
                 "text": "Leave the cave",
-                "emoji": "🏞️",
+                "emoji": "&#127966;",
                 "next": "exploringBehindWaterfall"
             }
         ]
@@ -316,7 +316,7 @@ var storyLine = {
         "choices": [
             {
                 "text": "Continue",
-                "emoji": "🍽️",
+                "emoji": "&#127869;",
                 "next": "stats"
             }
         ]
@@ -329,7 +329,7 @@ var storyLine = {
         "choices": [
             {
                 "text": "Continue",
-                "emoji": "🐍",
+                "emoji": "&#128013;",
                 "next": "stats"
             }
         ]
@@ -342,7 +342,7 @@ var storyLine = {
         "choices": [
             {
                 "text": "Continue",
-                "emoji": "🧗",
+                "emoji": "&#129495;",
                 "next": "topOfWaterfall"
             }
         ]
@@ -355,12 +355,12 @@ var storyLine = {
         "choices": [
             {
                 "text": "Continue towards the smoke",
-                "emoji": "🔥",
+                "emoji": "&#128293;",
                 "next": "berrieBush"
             },
             {
                 "text": "Follow the monkey into the jungle",
-                "emoji": "🦧",
+                "emoji": "&#128018;",
                 "next": "monkeyDed"
             }
         ]
@@ -373,7 +373,7 @@ var storyLine = {
         "choices": [
             {
                 "text": "Continue",
-                "emoji": "💀",
+                "emoji": "&#128128;",
                 "next": "stats"
             }
         ]
@@ -386,12 +386,12 @@ var storyLine = {
         "choices": [
             {
                 "text": "Eat the berries",
-                "emoji": "🍇",
+                "emoji": "&#127815;",
                 "next": "berriesEaten"
             },
             {
                 "text": "Continue towards the village",
-                "emoji": "🛖",
+                "emoji": "&#128726;",
                 "next": "village"
             }
         ]
@@ -404,12 +404,12 @@ var storyLine = {
         "choices": [
             {
                 "text": "Eat the berries",
-                "emoji": "🍇",
+                "emoji": "&#127815;",
                 "next": "berriesEatenDed"
             },
             {
                 "text": "Continue towards the village",
-                "emoji": "🛖",
+                "emoji": "&#128726;",
                 "next": "villageWithBerries"
             }
         ]
@@ -422,7 +422,7 @@ var storyLine = {
         "choices": [
             {
                 "text": "Continue",
-                "emoji": "😵",
+                "emoji": "&#128565;",
                 "next": "stats"
             }
         ]
@@ -435,12 +435,12 @@ var storyLine = {
         "choices": [
             {
                 "text": "Ask for help with the venom",
-                "emoji": "🙏",
+                "emoji": "&#128591;",
                 "next": "treatment"
             },
             {
                 "text": "Insult the village leader for allowing venomous spiders to be venomous",
-                "emoji": "🤬",
+                "emoji": "&#129324;",
                 "next": "banishedDed"
             }
         ]
@@ -453,7 +453,7 @@ var storyLine = {
         "choices": [
             {
                 "text": "Coninue",
-                "emoji": "🐸",
+                "emoji": "&#128056;",
                 "next": "stats"
             },
         ]
@@ -466,12 +466,12 @@ var storyLine = {
         "choices": [
             {
                 "text": "Offer the berries as a gift and ask for help with the venom",
-                "emoji": "🎁",
+                "emoji": "&#127873;",
                 "next": "itsTreasonThenDed"
             },
             {
                 "text": "Hide the berries and ask for help with the venom",
-                "emoji": "🙏",
+                "emoji": "&#128591;",
                 "next": "treatment"
             }
         ]
@@ -484,7 +484,7 @@ var storyLine = {
         "choices": [
             {
                 "text": "Continue",
-                "emoji": "💀",
+                "emoji": "&#128128;",
                 "next": "stats"
             }
         ]
@@ -497,7 +497,7 @@ var storyLine = {
         "choices": [
             {
                 "text": "Continue",
-                "emoji": "💪",
+                "emoji": "&#128170;",
                 "next": "stats"
             }
         ]
