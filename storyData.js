@@ -3,7 +3,7 @@ var storyLine = {
         "id": "start",
         "title": "The Beginning",
         "text": "As I opened my eyes, I realized I was in an abandoned campsite. The tents were torn, the fire pit was cold, and the jungle was eerily silent. Suddenly, a throbbing pain on my left arm brought me back to reality. Looking at it, I saw a spider bite with a red mark around it. My eyes caught the movement of a black spider with a red hourglass mark on its back scuttling away into the undergrowth. Panic set in as I realized I had no idea how I got there or how long I had been unconscious. With only a Swiss army knife, a torch and no clue of my whereabouts, fear overtook me. How was I going to survive?",
-        "image": "http://www.example.com/image.jpg",
+        "image": "https://source.unsplash.com/featured/",
         "choices": [
             {
                 "text": "I'm going to die!",
@@ -498,6 +498,19 @@ var storyLine = {
             {
                 "text": "Continue",
                 "emoji": "&#128170;",
+                "next": "stats"
+            }
+        ]
+    },
+    "ranOutOfTime":{
+        "id": "ranOutOfTime",
+        "title": "Venom Killed You",
+        "text": "The venom killed you",
+        "image": "http://www.example.com/image.jpg",
+        "choices": [
+            {
+                "text": "Continue",
+                "emoji": "⏰",
                 "next": "stats"
             }
         ]

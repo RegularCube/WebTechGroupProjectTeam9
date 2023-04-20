@@ -19,26 +19,61 @@
                 user-select: none;
             }
 
-            #wrapper {
-                margin: auto;
+            body {
+                min-height: 100vh;
+                display: flex;
+                gap: 10px;
+                background: pink;
+                margin: 0;
+
+                flex-direction: column;
+                align-items: stretch;
+
                 background-color: white;
             }
 
             #topBanner {
                 background-color: gray;
-                height: 25px;
-                width: 110%;
-                margin: 0px;
-                padding: 3px;
-                position: fixed;
-                top: 0;
-                left: 0;
             }
 
-            .test {
-                margin: 50px;
-                padding: 20px;
-                border: solid black 5px;
+            #gameWrapper{
+                display: flex;
+                gap: 10px;
+                align-items: stretch;
+                flex-wrap: wrap;
+                flex-grow: 1;
+            }
+
+            #leftCol{
+                display: flex;
+                flex-direction: column;
+                flex: 6;
+                background-color: aquamarine;
+            }
+
+            #rightCol{
+                display: flex;
+                flex-direction: column;
+                flex: 4;
+                background-color: aliceblue;
+            }
+
+            #imageBox {
+                flex-grow: 1;
+                background-color: moccasin;
+            }
+            #imageBox > img {
+                width: 100%;
+            }
+
+            #descriptionBox{
+                background-color: salmon;
+                flex-grow: 1;
+            }
+
+            #promptBox {
+                background-color:palegreen;
+                min-height: 200px; 
             }
 
             .popup {
@@ -338,6 +373,8 @@
                 timeLeft = getInitialTime();
                 document.getElementById('timeLeft').innerHTML = timeLeft;
                 timer = setInterval(decreaseTime, 1000);
+                sessionStorage.setItem('ranOutOfTime',false);
+
             }
 
             function decreaseTime() {
@@ -348,6 +385,10 @@
                     clearInterval(timer);
                     document.getElementById('timeLeft').innerHTML = 'Time Up';
                     //add method here to be taken to end screen with indication that time ran out.
+                    sessionStorage.setItem('ranOutOfTime',true);
+                    sessionStorage.setItem("sceneID","ranOutOfTime");
+                    setUpScene();
+
                 }
             }
 
@@ -378,7 +419,7 @@
                 console.log(APIResponse);
                 randomPos = APIResponse[0]["result"]; //this API returns random numbers in a list so extract the value
                 console.log(randomPos);
-                return myList[randomPos];
+                return myList[randomPos-1];
             }
 
             async function pickHeadsOrTails(myList) {
