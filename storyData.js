@@ -302,8 +302,201 @@ var storyLine = {
                 "next": "exploringBehindWaterfall"
             }
         ]
+    },
+    "gaveUp":{
+        "id": "gaveUp",
+        "title": "You gave up",
+        "text": "I gave up and died of starvation.",
+        "image": "http://www.example.com/image.jpg",
+        "choices": [
+            {
+                "text": "Continue",
+                "emoji": "🍽️",
+                "next": "stats"
+            }
+        ]
+    },
+    "returnToCampDed":{
+        "id": "returnToCampDed",
+        "title": "You returned to camp",
+        "text": "On my return journey, I noticed some strange markings on the ground. I followed them and found a cave. I entered the cave and found a treasure chest. I opened the chest and found a golden ring. I put the ring on my finger and it turned into a snake. The snake bit me and I died.",
+        "image": "http://www.example.com/image.jpg",
+        "choices": [
+            {
+                "text": "Continue",
+                "emoji": "🐍",
+                "next": "stats"
+            }
+        ]
+    },
+    "climbingWaterfall":{
+        "id": "climbingWaterfall",
+        "title": "Climbing The Waterfall",
+        "text": "I began to climb, grabbing onto the jagged rocks jutting out from the water. It was a slow and cautious ascent, but every step brought me closer to the top. The slick rocks made footing difficult meaning it never felt safe.",
+        "image": "http://www.example.com/image.jpg",
+        "choices": [
+            {
+                "text": "Continue",
+                "emoji": "🧗",
+                "next": "topOfWaterfall"
+            }
+        ]
+    },
+    "topOfWaterfall":{
+        "id": "topOfWaterfall",
+        "title": "Top Of The Waterfall",
+        "text": "My heart was pounding with both the exertion of the climb and anticipation of what awaited me. When I finally reached the summit, I caught a glimpse of a wild orangutan standing mere feet away from me. My initial fear turned to amazement as I gazed upon its majestic form. It then noticed my presence and swung away into the jungle. As I watched it swing away, my attention was drawn to smoke rising in the distance. Some kind of fire? This could be my chance to find out what happened to the others.",
+        "image": "http://www.example.com/image.jpg",
+        "choices": [
+            {
+                "text": "Continue towards the smoke",
+                "emoji": "🔥",
+                "next": "berrieBush"
+            },
+            {
+                "text": "Follow the monkey into the jungle",
+                "emoji": "🦧",
+                "next": "monkeyDed"
+            }
+        ]
+    },
+    "monkeyDed":{
+        "id": "monkeyDed",
+        "title": "Dead to the Monkeys", //Planet of the Apes reference
+        "text": "As I followed the monkey into the jungle, I could feel I was being watched. It turns out I was! There were hundreds of monkeys above me in the jungle canopy looking down on me. These weren't any ordinary monkeys... they were far more intelligent than I could ever imagine. The last thing I remembered was hearing the monkeys chant after I was captured by monkey with a homemade net.",
+        "image": "http://www.example.com/image.jpg",
+        "choices": [
+            {
+                "text": "Continue",
+                "emoji": "💀",
+                "next": "stats"
+            }
+        ]
+    },
+    "berrieBush":{
+        "id": "berrieBush",
+        "title": "Berrie bush",
+        "text": "On my way towards the smoke I could see it was coming from a village. I also noticed some berries growing on a bush.",
+        "image": "http://www.example.com/image.jpg",
+        "choices": [
+            {
+                "text": "Eat the berries",
+                "emoji": "🍇",
+                "next": "berriesEaten"
+            },
+            {
+                "text": "Continue towards the village",
+                "emoji": "🛖",
+                "next": "village"
+            }
+        ]
+    },
+    "berries":{
+        "id": "berries",
+        "title": "Berries",
+        "text": "I carefully avoided the thorns and picked a few berries. The berries looked delicious and were a bright red. I didn't know whether to eat them now to ease my hunger or take them with me to the village ahead.",
+        "image": "http://www.example.com/image.jpg",
+        "choices": [
+            {
+                "text": "Eat the berries",
+                "emoji": "🍇",
+                "next": "berriesEatenDed"
+            },
+            {
+                "text": "Continue towards the village",
+                "emoji": "🛖",
+                "next": "villageWithBerries"
+            }
+        ]
+    },
+    "berriesEatenDed":{
+        "id": "berriesEaten",
+        "title": "Berries",
+        "text": "I ate the berries and they tasted delicious. I felt a sudden burst of energy from the sweet berries and decided to continue towards the village. As I began to continue on my jouney",
+        "image": "http://www.example.com/image.jpg",
+        "choices": [
+            {
+                "text": "Continue",
+                "emoji": "😵",
+                "next": "stats"
+            }
+        ]
+    },
+    "village":{
+        "id": "village",
+        "title": "Village",
+        "text": "I enter the village and the village leader is summoned to meet me. I am surrounded by the village inhabitants as the leader asks why I am here.",
+        "image": "http://www.example.com/image.jpg",
+        "choices": [
+            {
+                "text": "Ask for help with the venom",
+                "emoji": "🙏",
+                "next": "treatment"
+            },
+            {
+                "text": "Insult the village leader for allowing venomous spiders to be venomous",
+                "emoji": "🤬",
+                "next": "banishedDed"
+            }
+        ]
+    },
+    "banishedDed":{
+        "id": "banishedDed",
+        "title": "Banished",
+        "text": "I was banished from the village because I insulted them. I didn't even survive the next night as I touched a poisonous frog.",
+        "image": "http://www.example.com/image.jpg",
+        "choices": [
+            {
+                "text": "Coninue",
+                "emoji": "🐸",
+                "next": "stats"
+            },
+        ]
+    },
+    "villageWithBerries":{
+        "id": "villageWithBerries",
+        "title": "Village With Berries",
+        "text": "I enter the village and the village leader is summoned to meet me. I am surrounded by the village inhabitants as the leader asks why I am here.",
+        "image": "http://www.example.com/image.jpg",
+        "choices": [
+            {
+                "text": "Offer the berries as a gift and ask for help with the venom",
+                "emoji": "🎁",
+                "next": "itsTreasonThenDed"
+            },
+            {
+                "text": "Hide the berries and ask for help with the venom",
+                "emoji": "🙏",
+                "next": "treatment"
+            }
+        ]
+    },
+    "itsTreasonThenDed":{
+        "id": "itsTreasonThenDed",
+        "title": "Its Treason Then",
+        "text": "The village took my gift of the berries as an insult and assasination attempt. I am quickly hacked down by the guards.",
+        "image": "http://www.example.com/image.jpg",
+        "choices": [
+            {
+                "text": "Continue",
+                "emoji": "💀",
+                "next": "stats"
+            }
+        ]
+    },
+    "treatment":{
+        "id": "treatment",
+        "title": "Treatment",
+        "text": "The village elder laid some leaves over my bitten hand. I was fed and rested for several days in the village until I had regained my strength. It was now time to discover the mystery of my campmates and escape this deadly jungle.",
+        "image": "http://www.example.com/image.jpg",
+        "choices": [
+            {
+                "text": "Continue",
+                "emoji": "💪",
+                "next": "stats"
+            }
+        ]
     }
-    
 
 
 
