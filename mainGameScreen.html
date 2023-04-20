@@ -402,7 +402,7 @@
                 console.log(APIResponse);
                 randomPos = APIResponse[0]["result"]; //this API returns random numbers in a list so extract the value
                 console.log(randomPos);
-                return myList[randomPos];
+                return myList[randomPos-1];
             }
 
             async function pickHeadsOrTails(myList) {
