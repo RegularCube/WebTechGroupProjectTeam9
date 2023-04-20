@@ -321,6 +321,8 @@
                 timeLeft = getInitialTime();
                 document.getElementById('timeLeft').innerHTML = timeLeft;
                 timer = setInterval(decreaseTime, 1000);
+                sessionStorage.setItem('ranOutOfTime',false);
+
             }
 
             function decreaseTime() {
@@ -331,6 +333,10 @@
                     clearInterval(timer);
                     document.getElementById('timeLeft').innerHTML = 'Time Up';
                     //add method here to be taken to end screen with indication that time ran out.
+                    sessionStorage.setItem('ranOutOfTime',true);
+                    sessionStorage.setItem("sceneID","ranOut");
+                    setUpScene();
+
                 }
             }
 

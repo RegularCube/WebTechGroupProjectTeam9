@@ -501,6 +501,19 @@ var storyLine = {
                 "next": "stats"
             }
         ]
+    },
+    "ranOutOfTime":{
+        "id": "ranOutOfTime",
+        "title": "Venom Killed You",
+        "text": "The venom killed you",
+        "image": "http://www.example.com/image.jpg",
+        "choices": [
+            {
+                "text": "Continue",
+                "emoji": "⏰",
+                "next": "stats"
+            }
+        ]
     }
 
 
