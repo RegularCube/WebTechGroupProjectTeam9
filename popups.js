@@ -80,6 +80,8 @@ function applyAccessibilityOptions() {
     gameContent.style.color = textColorInput.value;
     gameContent.style.backgroundColor = backgroundColorInput.value;
     gameContent.style.fontFamily = fontSelect.value;
+    document.styleSheets[0].cssRules[0].style.color = textColorInput.value;
+    console.log(document.styleSheets[0].cssRules[0]);
 }
 
 openAccessibilityPanelButton.addEventListener('click', openAccessibilityPanel);
