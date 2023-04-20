@@ -112,7 +112,7 @@ var storyLine = {
         "id": "waterfallOasis",
         "title": "The Waterfall Oasis",
         // there are vines hanging from the waterfall and fish in the river below the waterfall. scene is lush and green. There is a small path leading behind the waterfall.
-        "text": "placeholder",
+        "text": "The area beneath the waterfall is an oasis. The lush jungle surrounds the giant cliff where the waterfall is. There are several vines hanging off nearby trees, fish swimming nearby and a small path which looks to go behind the waterfall...",
         "image": "http://www.example.com/image.jpg",
         "choices": [
             {
@@ -148,7 +148,7 @@ var storyLine = {
     "waterfallOasisWithRopes":{
         "id": "waterfallOasisWithRopes",
         "title": "The Waterfall Oasis",
-        "text": "placeholder",
+        "text": "The area beneath the waterfall is an oasis. The lush jungle surrounds the giant cliff where the waterfall is. With a rope in hand, there are fish swimming nearby and a small path which looks to go behind the waterfall. With the rope it looks possible that the waterfall could be climbed...",
         "image": "http://www.example.com/image.jpg",
         "choices": [
             {
@@ -165,7 +165,12 @@ var storyLine = {
                 "text": "Attempt to catch fish with the ropes",
                 "emoji": "🎣",
                 "next": "fishing"
-            }
+            },
+            {
+                "text": "Attempt to climb the waterfall with the ropes",
+                "emoji": "🧗",
+                "next": "climbingWaterfall"
+            },
         ]
     },
     "floatOffWaterfallAndDed":{
