@@ -325,9 +325,11 @@
                 // Clicking a choice button too fast caused multiple typewriter effects
                 // simultateously - hence a new sceneText element is now created
                 // every time.
-                scene_text_name = "sceneText" + scene_number;
-                background_color = window.getComputedStyle(document.body).getPropertyValue('background-color');
-                document.getElementById("sceneTextLocation").innerHTML += "<p class=\"unselectable\" style=\"color:" + background_color + ";\" id=" + scene_text_name +"></p>";
+                var scene_text_name = "sceneText" + scene_number;
+                var descriptionBox = document.getElementById("descriptionBox");
+                var background_color = window.getComputedStyle(descriptionBox).getPropertyValue('background-color');
+                var text_element = "<p class=\"unselectable\" style=\"color:" + background_color + ";\" id=" + scene_text_name +"></p>";
+                document.getElementById("sceneTextLocation").innerHTML += text_element;
 
                 if (Array.isArray(text)) {
                     text = await pickRandomFromList(text);
