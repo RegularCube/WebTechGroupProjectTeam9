@@ -149,7 +149,7 @@
             <div id="rightCol">
                 <div id="descriptionBox"  class="test">
                     <h1>descriptionBox</h1>
-                    <p id="sceneText"></p>
+                    <div id="sceneTextLocation"></div>
                 </div>
 
                 <div id="promptBox" class="test">
@@ -161,6 +161,7 @@
         <script type="text/javascript" src="typewriter.js"></script>
 
         <script>
+            scene_number = 0;
             // get character customisation
             // sessionStorage.getItem('sceplayerNameneID');
             // sessionStorage.getItem('playerHairColour');
@@ -235,9 +236,10 @@
             }
 
             function clearScene() {
+                scene_number += 1;
                 promptBox = document.getElementById("promptBox");
                 promptBox.innerHTML = null;
-                sceneText = document.getElementById("sceneText");
+                sceneText = document.getElementById("sceneTextLocation");
                 sceneText.innerHTML = null;
             }
 
@@ -249,13 +251,18 @@
 
             function updateText(sceneDict) {
                 text = sceneDict.text;
+                // Clicking a choice button too fast caused multiple typewriter effects
+                // simultateously - hence a new sceneText element is now created
+                // every time.
+                scene_text_name = "sceneText" + scene_number;
+                document.getElementById("sceneTextLocation").innerHTML += "<p id=" + scene_text_name +"></p>"
 
                 if (Array.isArray(text)) {
                     //run API here
                     text = text[0]; //remove later
                 }
 
-                typeWriter(text, "sceneText", speed=9);
+                typeWriter(text, scene_text_name, speed=9);
             }
 
             function updatePrompts(sceneDict) {
