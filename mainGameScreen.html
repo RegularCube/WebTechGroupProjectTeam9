@@ -6,8 +6,13 @@
         <script type="text/javascript" src="storyData.js"></script>
 
         <style>
+            .text {
+                color: black;
+            }
+
             #wrapper {
                 margin: auto;
+                background-color: white;
             }
 
             #topBanner {
@@ -131,7 +136,7 @@
             <button onclick="reset()">reset</button>
         </div>
 
-        <div id="wrapper">
+        <div id="wrapper" class: "text">
 
             <div id="leftCol">
 
@@ -259,14 +264,17 @@
                 // simultateously - hence a new sceneText element is now created
                 // every time.
                 scene_text_name = "sceneText" + scene_number;
-                document.getElementById("sceneTextLocation").innerHTML += "<p id=" + scene_text_name +"></p>"
+                background_color = window.getComputedStyle(document.body).getPropertyValue('background-color');
+                document.getElementById("sceneTextLocation").innerHTML += "<p style=\"color:" + background_color + ";\" id=" + scene_text_name +"></p>";
 
                 if (Array.isArray(text)) {
                     text = await pickRandomFromList(text);
                     
                 }
 
-                typeWriter(text, scene_text_name, speed=9);
+                document.getElementById(scene_text_name).innerHTML = text;
+
+                typeWriter(scene_text_name, speed=9);
             }
 
             function updatePrompts(sceneDict) {
