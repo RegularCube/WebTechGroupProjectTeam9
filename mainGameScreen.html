@@ -249,7 +249,7 @@
                 document.getElementById("sceneImage").src = imgPath;
             }
 
-            function updateText(sceneDict) {
+            async function updateText(sceneDict) {
                 text = sceneDict.text;
                 // Clicking a choice button too fast caused multiple typewriter effects
                 // simultateously - hence a new sceneText element is now created
@@ -258,8 +258,8 @@
                 document.getElementById("sceneTextLocation").innerHTML += "<p id=" + scene_text_name +"></p>"
 
                 if (Array.isArray(text)) {
-                    //run API here
-                    text = text[0]; //remove later
+                    //run API function here
+                    text = await pickRandomFromList(text);
                 }
 
                 typeWriter(text, scene_text_name, speed=9);
@@ -329,6 +329,36 @@
                     //add method here to be taken to end screen with indication that time ran out.
                 }
             }
+
+            //API Calls
+
+            //coppied from mozilla and then edited by Will
+            // Example POST method implementation:
+            async function fetchURL(url = "") {
+            // Default options are marked with *
+            const response = await fetch(url, {
+                method: "GET", // *GET, POST, PUT, DELETE, etc.
+                mode: "cors", // no-cors, *cors, same-origin
+                cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+                credentials: "same-origin", // include, *same-origin, omit
+                redirect: "follow", // manual, *follow, error
+                referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+                
+            });
+            return response.json(); // parses JSON response into native JavaScript objects
+            }
+
+            async function pickRandomFromList(myList) {
+                listLength = myList.length;//myList.length();
+                console.log("length of array: "+listLength);
+                url = "https://www.randomnumberapi.com/api/v1.0/random";
+                qStr = "?min=0&max=" + (listLength - 1); //reducing by 1 so that it is the list index
+                APIResponse = await fetchURL(url+qStr);
+                randomPos = APIResponse[0] //this API returns random numbers in a list so extract the value
+                console.log(randomPos);
+                return myList[randomPos];
+            }
+
         </script>
 
     </body>
