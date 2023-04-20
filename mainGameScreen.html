@@ -10,6 +10,15 @@
                 color: black;
             }
 
+            .unselectable {
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
             #wrapper {
                 margin: auto;
                 background-color: white;
@@ -265,7 +274,7 @@
                 // every time.
                 scene_text_name = "sceneText" + scene_number;
                 background_color = window.getComputedStyle(document.body).getPropertyValue('background-color');
-                document.getElementById("sceneTextLocation").innerHTML += "<p style=\"color:" + background_color + ";\" id=" + scene_text_name +"></p>";
+                document.getElementById("sceneTextLocation").innerHTML += "<p class=\"unselectable\" style=\"color:" + background_color + ";\" id=" + scene_text_name +"></p>";
 
                 if (Array.isArray(text)) {
                     text = await pickRandomFromList(text);
