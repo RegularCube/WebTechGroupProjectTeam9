@@ -65,7 +65,8 @@ const textSizeInput = document.getElementById('text-size');
 const textColorInput = document.getElementById('text-color');
 const backgroundColorInput = document.getElementById('background-color');
 const fontSelect = document.getElementById('font-select');
-const gameContent = document.getElementById('wrapper');
+
+const gameContent = document.getElementById('gameWrapper');
 
 function openAccessibilityPanel() {
     accessibilityPanel.style.display = 'block';
