@@ -510,7 +510,7 @@ var storyLine = {
         "choices": [
             {
                 "text": "Continue",
-                "emoji": "⏰",
+                "emoji": "&#9200;",
                 "next": "stats"
             }
         ]
