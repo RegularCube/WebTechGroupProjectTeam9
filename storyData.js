@@ -218,7 +218,7 @@ var storyLine = {
     "exploringBehindWaterfall":{
         "id": "exploringBehindWaterfall",
         "title": "Exploring Behind The Waterfall",
-        "text": "As I walked behind the cascading waterfall, I could hear rushing water all around me. The misty spray cooled my face as I made my way deeper along the path behind the falls. Suddenly I notice a cave entrance which had previously hidden by the waterfall.",
+        "text": "As I walked behind the cascading waterfall, I could hear rushing water all around me. The misty spray cooled my face and dripped from my {hairColor} hair as I made my way deeper along the path behind the falls. Suddenly I notice a cave entrance which had previously hidden by the waterfall.",
         "image": "http://www.example.com/image.jpg",
         "choices": [
             {
@@ -236,7 +236,7 @@ var storyLine = {
     "exploringBehindWaterfallWithRopes":{
         "id": "exploringBehindWaterfallWithRopes",
         "title": "Exploring Behind The Waterfall",
-        "text": "As I walked behind the cascading waterfall, I could hear rushing water all around me. The misty spray cooled my face as I made my way deeper along the path behind the falls. Suddenly I notice a cave entrance which had previously hidden by the waterfall.",
+        "text": "As I walked behind the cascading waterfall, I could hear rushing water all around me. The misty spray cooled my face and dripped from my {hairColor} hair as I made my way deeper along the path behind the falls. Suddenly I notice a cave entrance which had previously hidden by the waterfall.",
         "image": "http://www.example.com/image.jpg",
         "choices": [
             {
@@ -324,7 +324,7 @@ var storyLine = {
     "returnToCampDed":{
         "id": "returnToCampDed",
         "title": "You returned to camp",
-        "text": "On my return journey, I noticed some strange markings on the ground. I followed them and found a cave. I entered the cave and found a treasure chest. I opened the chest and found a golden ring. I put the ring on my finger and it turned into a snake. The snake bit me and I died.",
+        "text": "On my return journey, I noticed some strange markings on the ground. I followed them and found a cave. I entered the cave and found a treasure chest. I opened the chest and found a golden ring. I put the ring on my finger and it turned into a snake. The snake turned to me and whispered \"{name}, you are a fool\". As I pondered this, the snake bit me and I died.",
         "image": "http://www.example.com/image.jpg",
         "choices": [
             {
@@ -434,12 +434,12 @@ var storyLine = {
         "image": "http://www.example.com/image.jpg",
         "choices": [
             {
-                "text": "Ask for help with the venom",
+                "text": "Say you're a wizard",
                 "emoji": "&#128591;",
                 "next": "treatment"
             },
             {
-                "text": "Insult the village leader for allowing venomous spiders to be venomous",
+                "text": "Ask for help with the venom",
                 "emoji": "&#129324;",
                 "next": "banishedDed"
             }
@@ -448,7 +448,7 @@ var storyLine = {
     "banishedDed":{
         "id": "banishedDed",
         "title": "Banished",
-        "text": "I was banished from the village because I insulted them. I didn't even survive the next night as I touched a poisonous frog.",
+        "text": "The village leader turns beetroot. \"You DARE ask demand this of me in my own realm?!\" You are swiftly beaten, burned and scattered across the fields, and not necessarily in that order.",
         "image": "http://www.example.com/image.jpg",
         "choices": [
             {
@@ -492,7 +492,7 @@ var storyLine = {
     "treatment":{
         "id": "treatment",
         "title": "Treatment",
-        "text": "The village elder laid some leaves over my bitten hand. I was fed and rested for several days in the village until I had regained my strength. It was now time to discover the mystery of my campmates and escape this deadly jungle.",
+        "text": "The leader looks at you and laughs. \"You are of very {height} height for a wizard\". He then notices your bite. \"We are a noble people\" he says, \"We will not endure instruction from anyone, but will freely aid those who need it. Come, let us heal you\". The village elder laid some leaves over my bitten hand. I was fed and rested for several days in the village until I had regained my strength. It was now time to discover the mystery of my campmates and escape this deadly jungle.",
         "image": "http://www.example.com/image.jpg",
         "choices": [
             {
@@ -515,10 +515,14 @@ var storyLine = {
             }
         ]
     }
+}
 
-
-
-
-
-
+function personalize(storyTree, name, hairColor, height) {
+    for (storyNodeKey in storyTree) {
+        storyNode = storyTree[storyNodeKey];
+        storyNode["text"] = String(storyNode["text"]).replace("{name}", name);
+        storyNode["text"] = String(storyNode["text"]).replace("{hairColor}", hairColor);
+        storyNode["text"] = String(storyNode["text"]).replace("{height}", height);
+    }
+    return storyTree;
 }

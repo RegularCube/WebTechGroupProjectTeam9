@@ -235,12 +235,12 @@
             // sessionStorage.getItem('playerHeight');
 
             // game logic
+            storyLine = personalize(storyLine, sessionStorage.getItem("playerName"), sessionStorage.getItem("playerHairColour"), sessionStorage.getItem("playerHeight"));
             setUpScene();
 
             function reset() {
                 sceneID = "start";
                 sessionStorage.setItem('sceneID',sceneID);
-
                 setUpScene();
             }
 
