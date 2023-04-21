@@ -27,12 +27,12 @@ var storyLine = {
         "image": "1030images/path.jpg",
         "choices": [
             {
-                "text": "Continue down path",
+                "text": "Continue along the path and investigate the sound",
                 "emoji": "&#128561;",
                 "next": "waterfallOverlook"
             },
             {
-                "text": "Return to camp",
+                "text": "Return to the camp and wait out the dangers ahead",
                 "emoji": "&#127957;",
                 "next": "returnToCampDed"
             }
@@ -47,12 +47,12 @@ var storyLine = {
         "image": "1030images/top_of_waterfall.jpg",
         "choices": [
             {
-                "text": "Quickly but carefully traverse down the jungle slope to the waterfall",
+                "text": "Check out the waterfall.",
                 "emoji": "&#127939;",
                 "next": "waterfallOasis"
             },
             {
-                "text": "Climb up the branches to the higher vantage point",
+                "text": "Climb the tree.",
                 "emoji": "&#127966;",
                 "next": "slipperyBranchOverlook"
             }
@@ -66,7 +66,7 @@ var storyLine = {
         "image": "1030images/smoke.jpeg",
         "choices": [
             {
-                "text": "Climb back down to the base of the tree.",
+                "text": "Climb back down",
                 "emoji": "&#127795;",
                 "next": ["waterfallOverlook", "fallingFromTree"]
             }
@@ -124,7 +124,7 @@ var storyLine = {
         "image": "1030images/waterfall.jpg",
         "choices": [
             {
-                "text": "Explore behind the waterfall",
+                "text": "Follow the mysterious path",
                 "emoji": "&#128166;",
                 "next": "exploringBehindWaterfall"
             },
@@ -203,16 +203,16 @@ var storyLine = {
         "title": "Fishing",
         "endOfStoryLine": false,
         "text": [
-            "I tried to lasso the fish but threw it way too far. I must try it again.",
-            "I threw the loop near the fish, but the fish were too big to get caught, I will tighten the loop.",
-            "I threw the loop at the fish, but the fish were too slippery to stay in the loop, I will loosen the loop.",
-            "I threw but missed, I know fishing is purely practice and persistence",
-            "I arc the rope near the fish but to no avail, I won’t let another failed attempt discourage me.",
-            "It was a tired throw so it had no chance of catching the fish. If I get tired then that must mean the fish get tired!",
-            "My fishing skills are improving; I’ll get lucky soon!",
-            "I missed. When I catch a fish, I’ll make a delicious meal out of it.",
-            "I missed. My hunger will only make the victory even sweeter; I must try again.",
-            "I miss, the water splashes at my hand with the bite and makes it sting heavily, is catching the fish even worth it?"
+            "You try to lasso the fish but throw it way too far. The fish smiles at you.",
+            "You throw the lasso near the fish, but the fish is bigger that the loop. You loosen it up a bit.",
+            "You throw the lasso at the fish, but it's too slippery to stay in the loop. You reflect that lassoing is not a fishing technique you've heard of anyone using.",
+            "You throw and miss. \"Fishing is purely practice and persistence\" you say aloud.",
+            "The rope arcs beautifully through the air right towards a fish. It fastens neatly around it, and as you pull the loop tightens sharply and the fish is torn in two. Another fish promptly eats it. Oh well.",
+            "You throw it, but it was a tired throw from a tired man. Surely the fish will get tired too. You start wondering if fish sleep.",
+            "Your fishing skills are improving, you're sure to get lucky soon! And no, you didn't catch one.",
+            "You missed, you were two busy thinking of what garnish would go best with raw fish.",
+            "You missed. Your stomach growls. You growl back.",
+            "You throw and the lasso grabs a big one. You eagerly pull it back, with such force that it comes hurtling towards you. The fish slaps your arm and the bite stings like crazy. Amidst the pain the fish runs away into the bushes, then remembers itself and gets back in the water."
         ],
         "image": "1030images/fish_pool.png",
         "choices": [
@@ -304,7 +304,7 @@ var storyLine = {
         "image": "1030images/in_cave.jpg",
         "choices": [
             {
-                "text": "Use the torch",
+                "text": "Use your torch",
                 "emoji": "&#128294;",
                 "next": "caveWithTorch"
             },
@@ -420,7 +420,7 @@ var storyLine = {
                 "next": "berriesEaten"
             },
             {
-                "text": "Continue towards the village",
+                "text": "Anything that good-looking is obviously poisonous. Continue towards the village",
                 "emoji": "&#128726;",
                 "next": "village"
             }
@@ -439,7 +439,7 @@ var storyLine = {
                 "next": "berriesEatenDed"
             },
             {
-                "text": "Continue towards the village",
+                "text": "Classic story poison berries. Continue on instead.",
                 "emoji": "&#128726;",
                 "next": "villageWithBerries"
             }
