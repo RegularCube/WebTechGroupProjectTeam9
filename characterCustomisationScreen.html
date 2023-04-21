@@ -2,6 +2,8 @@
     <head>
         <title>Jungle Escape</title>
 
+        <script type="text/javascript" src="storyData.js"></script>
+
         <style>
 
             *{
@@ -101,9 +103,37 @@
                 sessionStorage.setItem('playerHeight', playerHeight);
                 sessionStorage.setItem('difficulty', difficulty);
                 sessionStorage.setItem('sceneID','start');
+
+                setStoryCompletionDictionary();
                 
                 window.open('mainGameScreen.html','_self');
                 
+            }
+
+            function setStoryCompletionDictionary() {
+                completionDict = {};
+
+                // sceneDict = storyLine[sceneID];
+
+                // for (var key in p) {
+                //     if (p.hasOwnProperty(key)) {
+                //         console.log(key + " -> " + p[key]);
+                //     }
+                // }
+
+                console.log("about to log scene id's for 2323131");
+
+                for (var sceneID in storyLine) {
+                    console.log("sceneID: " + sceneID);
+                    sceneDict = storyLine[sceneID];
+                    if (sceneDict["endOfStoryLine"]) {
+                        completionDict[sceneID] = false;
+                        console.log(completionDict);
+                    }
+                }
+
+                sessionStorage.setItem('completionDict',JSON.stringify(completionDict));
+
             }
         </script>
     </body>
