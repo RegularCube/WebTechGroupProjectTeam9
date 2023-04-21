@@ -366,7 +366,6 @@
             // timer logic
             //timer related variables and event listener
             window.addEventListener('load', startTimer);
-            window.addEventListener('')
             var timeLeft = 60; //default amount
             var timer
 
@@ -391,9 +390,18 @@
                 return timeLeft;
             }
 
+            function displayTime() {
+                var minutes = ~~(timeLeft / 60); // Bit-wise operators make it the whole quotient of the division
+                var seconds = timeLeft % 60;
+                if (seconds == 0) {
+                    seconds = "00" // Ensures consistent formatting
+                }
+                document.getElementById('timeLeft').innerHTML = minutes + ":" + seconds;
+            }
+
             function startTimer() {
                 timeLeft = getInitialTime();
-                document.getElementById('timeLeft').innerHTML = timeLeft;
+                displayTime();
                 timer = setInterval(decreaseTime, 1000);
                 sessionStorage.setItem('ranOutOfTime',false);
 
@@ -402,7 +410,7 @@
             function decreaseTime() {
                 if (timeLeft>0) {
                     timeLeft--;
-                    document.getElementById('timeLeft').innerHTML = timeLeft;
+                    displayTime();
                 } else {
                     clearInterval(timer);
                     document.getElementById('timeLeft').innerHTML = 'Time Up';
