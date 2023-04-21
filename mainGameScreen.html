@@ -246,6 +246,8 @@
             function reset() {
                 sceneID = "start";
                 sessionStorage.setItem('sceneID',sceneID);
+                sessionStorage.setItem('playerAlive',true);
+                sessionStorage.setItem('causeOfDeath',null);
                 setUpScene();
             }
 
@@ -256,16 +258,31 @@
                     sessionStorage.setItem('sceneID',sceneID);
                 }
                 sceneDict = storyLine[sceneID];
+                console.log("scene dict in setup scene")
                 console.log(sceneDict);
                 if (sceneDict === undefined) {
                     if (sceneID == "stats") {
-                        //go to stats page
+                        window.open('stats.html','_self');
                     }
                     else {
                         alert("You've reached a dead-end in the story! Let us know how you found it.")
                     }
                 }
                 else {
+                    if (sceneDict["causeOfDeath"]) {
+                        sessionStorage.setItem('causeOfDeath',sceneDict["causeOfDeath"]);
+                        sessionStorage.setItem('playerAlive',false);
+                        console.log("set player alive false");
+
+
+                    
+                    }
+                    if (sceneDict["endOfStoryLine"]) {
+                        completionDict = JSON.parse(sessionStorage.getItem('completionDict'));
+
+                        completionDict[sceneID] = true;
+                        sessionStorage.setItem('completionDict',JSON.stringify(completionDict));
+                    }
                     setElementsOnPage(sceneDict);
                     checkEndOfStoryLine();
                 }
@@ -288,18 +305,14 @@
             }
 
             async function buttonClick(event){
-                console.log(event.target.choiceNumber);
                 choiceNumber = event.target.choiceNumber;
-                console.log("a button was clicked");
 
                 sceneID = sessionStorage.getItem('sceneID');
 
                 sceneDict = storyLine[sceneID];
-                console.log(sceneDict);
                 choices = sceneDict.choices;
 
                 choice = choices[choiceNumber];
-                console.log(choice);
                 next = choice.next;
                 if (Array.isArray(next)) {
                     //run API here]
@@ -360,7 +373,6 @@
                     button.innerHTML = element.emoji;
                     button.onclick = buttonClick;
                     button.choiceNumber = index;
-                    console.log(element.emoji);
                     choiceDiv.appendChild(button);
                     let choiceText = document.createElement("p");
                     choiceText.innerHTML = element.text;
@@ -373,7 +385,6 @@
                 //switch statement to check if a story line end has been reached
                 //then setting it so it's known it's been reached for the stats
                 completionDict = JSON.parse(sessionStorage.getItem('completionDict'));
-                console.log(completionDict);
 
 
                 
@@ -382,8 +393,8 @@
             // timer logic
             //timer related variables and event listener
             window.addEventListener('load', startTimer);
-            var timeLeft = 60; //default amount
-            var timer
+            var timeLeft;
+            var timer;
 
             //timer methods
 
@@ -458,23 +469,17 @@
 
             async function pickRandomFromList(myList) {
                 listLength = myList.length;//myList.length();
-                console.log("length of array: "+listLength);
                 url = "http://andymcdowell.hosting.hal.davecutting.uk/1030_APIs/diceRollWithInputs.php";
                 qStr = "?diceFaceNumber=" + listLength + "&diceNumber=1"; //reducing by 1 so that it is the list index
                 APIResponse = await fetchURL(url+qStr);
-                console.log(APIResponse);
                 randomPos = APIResponse[0]["result"]; //this API returns random numbers in a list so extract the value
-                console.log(randomPos);
                 return myList[randomPos-1];
             }
 
             async function pickHeadsOrTails(myList) {
                 url = "http://andymcdowell.hosting.hal.davecutting.uk/1030_APIs/coinFlip.php";
                 APIResponse = await fetchURL(url);
-                console.log("api response from heads and tails:")
-                console.log(APIResponse);
                 HeadsOrTails = APIResponse["coinFlip"]
-                console.log("Head or tails result "+HeadsOrTails);
                 if (HeadsOrTails == "Heads") {
                     index = 0;
                 } else {

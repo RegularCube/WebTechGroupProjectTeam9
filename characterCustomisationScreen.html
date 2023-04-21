@@ -103,6 +103,8 @@
                 sessionStorage.setItem('playerHeight', playerHeight);
                 sessionStorage.setItem('difficulty', difficulty);
                 sessionStorage.setItem('sceneID','start');
+                sessionStorage.setItem('playerAlive',true);
+                sessionStorage.setItem('causeOfDeath',null);
 
                 setStoryCompletionDictionary();
                 
@@ -112,14 +114,6 @@
 
             function setStoryCompletionDictionary() {
                 completionDict = {};
-
-                // sceneDict = storyLine[sceneID];
-
-                // for (var key in p) {
-                //     if (p.hasOwnProperty(key)) {
-                //         console.log(key + " -> " + p[key]);
-                //     }
-                // }
 
                 console.log("about to log scene id's for 2323131");
 
