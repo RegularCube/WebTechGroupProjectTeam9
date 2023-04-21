@@ -240,6 +240,7 @@
             function reset() {
                 sceneID = "start";
                 sessionStorage.setItem('sceneID',sceneID);
+
                 setUpScene();
             }
 
@@ -365,6 +366,7 @@
             // timer logic
             //timer related variables and event listener
             window.addEventListener('load', startTimer);
+            window.addEventListener('')
             var timeLeft = 60; //default amount
             var timer
 
@@ -374,17 +376,17 @@
                 difficulty = sessionStorage.getItem('difficulty');
 
                 switch(difficulty) {
-                    case "easy":
-                        timeLeft = 240;
-                        break;
-                    case "medium":
-                        timeLeft = 120;
+                    case "normal":
+                        timeLeft = 300;
                         break;
                     case "hard":
-                        timeLeft = 45
+                        timeLeft = 150;
+                        break;
+                    case "vhard":
+                        timeLeft = 60;
                         break;
                     default:
-                        timeLeft = 120;
+                        timeLeft = 300;
                 }
                 return timeLeft;
             }
