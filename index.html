@@ -1,47 +1,96 @@
 <html>
-    <head>
-        <title>Jungle Escape</title>
+<head>
+    <title>Jungle Escape</title>
 
-        <style>
+    <style>
 
-            *{
-                text-align: center;
-            }
+    @font-face{
+        font-family: PathwayExtreme;
+        src: url('fonts/PathwayExtreme.ttf');
+        /*source:  https://fonts.google.com/specimen/Pathway+Extreme */
+    }
 
-            body{
-                margin: none; 
-                background-image: url('jungleBackdrop.jpg'); /* free to use, image source: https://unsplash.com/photos/wSEv7Nanuxc */
-                background-repeat: no-repeat;
-                background-size: 100%;
-            }
-
-            #title {
-                color: black;
-                font-size: 2em;
-                text-align: center;
-                background-color: white;
-                border: 3px solid black;
-
-            }
+    @font-face{
+        font-family: Jungle;
+        src: url('fonts/Jungle.ttf');
+        /*source:  https://fonts.google.com/specimen/Caesar+Dressing?preview.text=Jungle%20Mania&preview.text_type=custom&category=Display */
+    }
 
 
+    *{
+        text-align: center;
+    }
 
-        </style>
+    body{
+        margin: none; 
+        background-image: url('jungleBackdrop.jpg'); /* free to use, image source: https://unsplash.com/photos/wSEv7Nanuxc */
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: 'PathwayExtreme';
+    }
 
-    </head>
-    <body>
+    #title, #start {
+        color: black;
+        font-size: 2em;
+        text-align: center;
+        border: 3px solid black;
+        width: 65%;
+        margin:  auto;
+        background-color: rgba(255,255,255,0.6);
+        border-radius: 10px;
+    }
 
-        <div id="title">
-            <h1>Jungle Mania</h1>
-        </div>
+    #title{
+        margin-bottom: 20px;
+    }
 
-        <p>A long time ago, in a jungle far, far way...</p>
+    h1{
+        font-family: 'Jungle';
+        font-size: 3.5em;
+        margin: 10px;
+        line-height: 1em;
+    }
 
-        <p>More text descriptions.......</p>
+    #start{
+        width: 50%;
+        transition: 400ms ease-in-out;
+    }
 
-        <a href="characterCustomisationScreen.html">Start Game</a>
+    a{
+        text-decoration: none;
+    }
+
+    a:visited{
+        color: black;
+    }
+
+    #start:hover{
+     transform: scale(1.5, 1.5);
+ }
+
+ #start:active{
+    border-color: red;
+}
+
+p{
+    font-size: 0.5em;
+}
+
+</style>
+
+</head>
+<body>
+
+    <div id="title">
+        <h1>Jungle Mania</h1>
+        <p>Explore a dense and dangerous jungle, encounter ferocious beasts, and solve tricky puzzles to find your way back to civilization. Will you be able to navigate the treacherous terrain and make it out alive?</p>
+
+        <p>Made by Group 9 Productions (Will, Caleb, Dawar and Corey)</p>
+    </div>
+
+    <h2 id="start"><a  href="characterCustomisationScreen.html">Start Game</a></h1>
 
 
-        
-    </body>
+
+</body>
 </html>
