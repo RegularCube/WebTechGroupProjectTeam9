@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Jungle Mania</title>
+    </head>
+    <body>
+        <div id="content">
+            <h1 id="title"></h1>
+            <h2 id="subtitle"></h2>
+            <p id="message"></p>
+            <h2>Statistics</h2>
+            <p id="stats"></p>
+            <button>🕹️ Play Again</button>
+        </div>
+
+        <script>
+
+            populate();
+
+            function populate() {
+                
+                playerAlive = sessionStorage.getItem("playerAlive");
+                causeOfDeath = sessionStorage.getItem("causeOfDeath");
+                endingsFound = calcEndingsFound();
+                totalEndings = calcTotalEndings();
+                timeTaken = sessionStorage.getItem("timeTaken");
+                difficulty  = sessionStorage.getItem("difficulty");
+
+                title = document.getElementById("title");
+                subtitle = document.getElementById("subtitle");
+                message = document.getElementById("message");
+
+                console.log("player alive:");
+                console.log(playerAlive);
+                if (playerAlive == "true") {
+                    title.innerHTML = "You Survived";
+                    subtitle.innerHTML = "Congratulations";
+                    message.innerHTML = "Why not keep playing to see if you can reach all of the different endings."
+                } else {
+                    title.innerHTML = "You Died";
+                    subtitle.innerHTML = "Cause of Death ";
+                    message.innerHTML = causeOfDeath;
+                }
+
+                //add stats part
+                stats = document.getElementById("stats");
+                stats.innerHTML = "Endings Found: " + endingsFound + "/" + totalEndings; // TODO get total endiongs later
+                stats.innerHTML += "<br>Time Taken: " + formatSecondsToTimeString(timeTaken);
+                stats.innerHTML += "<br>Difficulty: " + difficulty;
+
+
+                
+            }
+
+            function calcEndingsFound() {
+                endingsFound = 0;
+
+                completionDict = JSON.parse(sessionStorage.getItem('completionDict'));
+                for (var ending in completionDict) {
+                    if (completionDict[ending]) {
+                        endingsFound++;
+                    }
+                }
+                return endingsFound;
+            }
+            
+            function calcTotalEndings() {
+                completionDict = JSON.parse(sessionStorage.getItem('completionDict'));
+                return Object.keys(completionDict).length;
+            }
+
+            function formatSecondsToTimeString(seconds) {
+
+            }
+        </script>
+
+    </body>
+</html>

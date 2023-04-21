@@ -9,7 +9,7 @@ var storyLine = {
             {
                 "text": "I'm going to die!",
                 "emoji": "&#128561;",
-                "next": "ded"
+                "next": "gaveUp"
             },
             {
                 "text": "I'm going to survive! I'm going to find help!",
@@ -90,7 +90,7 @@ var storyLine = {
         "id": "fellFromTreeAndDed",
         "title": "You fell from The Tree",
         "endOfStoryLine": true,
-        // fell from the tree and died spectacularly
+        "causeOfDeath" : "Fell from tree",
         "text": "As I landed on the ground, I broke my neck and died.",
         "image": "1030images/Game_over.png",
         "choices": [
@@ -187,6 +187,7 @@ var storyLine = {
         "id": "floatOffWaterfallAndDed",
         "title": "You floated off the waterfall",
         "endOfStoryLine": true,
+        "causeOfDeath" : "Mauled by crocodile",
         "text": "You floated downstream. On the way, you were attacked by a crocodile and died.",
         "image": "1030images/Game_over.png",
         "choices": [
@@ -269,6 +270,7 @@ var storyLine = {
         "id": "caveFallDed",
         "title": "The Cave",
         "endOfStoryLine": true,
+        "causeOfDeath" : "Starvation in cave",
         "text": "As I walked into the cave, I was immediately blinded by the darkness. I stumbled around for a few minutes until I tripped over a rock and fell to the ground. I was unable to get up and died of starvation.",
         "image": "1030images/Game_over.png",
         "choices": [
@@ -283,6 +285,7 @@ var storyLine = {
         "id": "caveRopesDed",
         "title": "The Cave",
         "endOfStoryLine": true,
+        "causeOfDeath" : "Tripped over rope",
         "text": "As I walked into the cave, I was immediately blinded by the darkness. I stumbled around for a few minutes until I tripped over mr ropes and fell to the ground. I hit my head on a stalacmite and died.",
         "image": "1030images/Game_over.png",
         "choices": [
@@ -330,6 +333,7 @@ var storyLine = {
         "id": "gaveUp",
         "title": "You gave up",
         "endOfStoryLine": true,
+        "causeOfDeath" : "Gave up",
         "text": "I gave up and died of starvation.",
         "image": "1030images/Game_over.png",
         "choices": [
@@ -344,6 +348,7 @@ var storyLine = {
         "id": "returnToCampDed",
         "title": "You returned to camp",
         "endOfStoryLine": true,
+        "causeOfDeath" : "Snake bite",
         "text": "On my return journey, I noticed some strange markings on the ground. I followed them and found a cave. I entered the cave and found a treasure chest. I opened the chest and found a golden ring. I put the ring on my finger and it turned into a snake. The snake turned to me and whispered \"{name}, you are a fool\". As I pondered this, the snake bit me and I died.",
         "image": "1030images/Game_over.png",
         "choices": [
@@ -391,6 +396,7 @@ var storyLine = {
         "id": "monkeyDed",
         "title": "Dead to the Monkeys", //Planet of the Apes reference
         "endOfStoryLine": true,
+        "causeOfDeath" : "Captured by smart monkeys",
         "text": "As I followed the monkey into the jungle, I could feel I was being watched. It turns out I was! There were hundreds of monkeys above me in the jungle canopy looking down on me. These weren't any ordinary monkeys... they were far more intelligent than I could ever imagine. The last thing I remembered was hearing the monkeys chant after I was captured by monkey with a homemade net.",
         "image": "1030images/Game_over.png",
         "choices": [
@@ -443,6 +449,7 @@ var storyLine = {
         "id": "berriesEaten",
         "title": "Berries",
         "endOfStoryLine": true,
+        "causeOfDeath" : "Delicious berries",
         "text": "I ate the berries and they tasted delicious. I felt a sudden burst of energy from the sweet berries and decided to continue towards the village. As I began to continue on my jouney",
         "image": "1030images/Game_over.png",
         "choices": [
@@ -476,6 +483,7 @@ var storyLine = {
         "id": "banishedDed",
         "title": "Banished",
         "endOfStoryLine": true,
+        "causeOfDeath" : "The village kills you",
         "text": "The village leader turns beetroot. \"You DARE ask demand this of me in my own realm?!\" You are swiftly beaten, burned and scattered across the fields, and not necessarily in that order.",
         "image": "1030images/Game_over.png",
         "choices": [
@@ -509,6 +517,7 @@ var storyLine = {
         "id": "itsTreasonThenDed",
         "title": "Its Treason Then",
         "endOfStoryLine": true,
+        "causeOfDeath" : "Treason",
         "text": "The village took my gift of the berries as an insult and assasination attempt. I am quickly hacked down by the guards.",
         "image": "1030images/Game_over.png",
         "choices": [
@@ -537,6 +546,7 @@ var storyLine = {
         "id": "ranOutOfTime",
         "title": "Venom Killed You",
         "endOfStoryLine": true,
+        "causeOfDeath" : "Succumned to the venom",
         "text": "The venom killed you",
         "image": "1030images/Game_over.png",
         "choices": [
