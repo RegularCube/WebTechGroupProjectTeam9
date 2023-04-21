@@ -262,6 +262,7 @@
                 }
                 else {
                     setElementsOnPage(sceneDict);
+                    checkEndOfStoryLine();
                 }
             }
 
@@ -361,6 +362,16 @@
                     choiceDiv.appendChild(choiceText);
                     promptBox.appendChild(choiceDiv);
                 });
+            }
+
+            function checkEndOfStoryLine() {
+                //switch statement to check if a story line end has been reached
+                //then setting it so it's known it's been reached for the stats
+                completionDict = JSON.parse(sessionStorage.getItem('completionDict'));
+                console.log(completionDict);
+
+
+                
             }
 
             // timer logic
