@@ -50,16 +50,25 @@
 
         button{
             margin-left: 4.5em;
+            border-radius: 5px;
+
+            /* Reused Corey's scale effect for hovering over the button */
+            transition: 400ms ease-in-out;
+        }
+
+        /* Reused Corey's scale effect for hovering over the button */
+        button:hover{
+            transform: scale(1.5, 1.5);
         }
     </style>
     </head>
     <body>
         <div id="content">
-            <h1 id="title"></h1>
-            <h2 id="subtitle"></h2>
-            <p id="message"></p>
+                <h1 id="title"></h1>
+                <h2 id="subtitle"></h2>
+                <p id="message"></p>
             <h2>Statistics</h2>
-            <p id="stats"></p>
+                <p id="stats"></p>
             <button onclick="resetStory()">🕹️ Play Again</button>
         </div>
 
@@ -92,7 +101,7 @@
 
                 //add stats part
                 stats = document.getElementById("stats");
-                stats.innerHTML = "Endings Found: " + endingsFound + "/" + totalEndings; // TODO get total endiongs later
+                stats.innerHTML = "Endings Found: " + endingsFound + "/" + totalEndings;
                 stats.innerHTML += "<br>Time Taken: " + formatSecondsToTimeString(timeTaken);
                 stats.innerHTML += "<br>Difficulty: " + difficulty;
 
@@ -118,7 +127,14 @@
             }
 
             function formatSecondsToTimeString(seconds) {
+                timeString = "";
 
+                timeString += ((seconds / 60) - (seconds / 60) % 1);
+                timeString += "m ";
+                timeString += (seconds % 60);
+                timeString += "s";
+
+                return timeString;
             }
 
             function resetStory() {
