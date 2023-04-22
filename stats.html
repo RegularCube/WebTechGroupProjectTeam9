@@ -1,6 +1,57 @@
 <html>
     <head>
         <title>Jungle Mania</title>
+        <style>
+        @font-face {
+            font-family: PathwayExtreme;
+            src: url('fonts/PathwayExtreme.ttf');
+            /*source:  https://fonts.google.com/specimen/Pathway+Extreme */
+        }
+
+        @font-face {
+            font-family: Jungle;
+            src: url('fonts/Jungle.ttf');
+            /*source:  https://fonts.google.com/specimen/Caesar+Dressing?preview.text=Jungle%20Mania&preview.text_type=custom&category=Display */
+        }
+
+        * {
+            font-family: 'PathwayExtreme'
+        }
+
+        body {
+            background-image: url('jungleBackdrop.jpg');
+            /* free to use, image source: https://unsplash.com/photos/wSEv7Nanuxc */
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #content {
+            border: 3px solid;
+            border-radius: 10px;
+            display: inline-block;
+            padding: 2em;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 20%;
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+
+        #content>* {
+            display: grid;
+            justify-content: center;
+        }
+
+        #title {
+            font-family: 'Jungle';
+            font-size: 4em;
+            margin: 0px;
+        }
+
+        button{
+            margin-left: 4.5em;
+        }
+    </style>
     </head>
     <body>
         <div id="content">
