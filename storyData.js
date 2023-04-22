@@ -1,7 +1,7 @@
 var storyLine = {
     "start":{
         "id": "start",
-        "title": "The Beginning",
+        "title": "The Abandoned Campsite",
         "endOfStoryLine": false,
         "text": "As I opened my eyes, I realized I was in an abandoned campsite. The tents were torn, the fire pit was cold, and the jungle was eerily silent. Suddenly, a throbbing pain on my left arm brought me back to reality. Looking at it, I saw a spider bite with a red mark around it. My eyes caught the movement of a black spider with a red hourglass mark on its back scuttling away into the undergrowth. Panic set in as I realized I had no idea how I got there or how long I had been unconscious. With only a Swiss army knife, a torch and no clue of my whereabouts, fear overtook me. How was I going to survive?",
         "image": "1030images/campsite.jpg",
@@ -60,7 +60,7 @@ var storyLine = {
     },
     "slipperyBranchOverlook":{
         "id": "slipperyBranchOverlook",
-        "title": "The Slippery Branch Overlook",
+        "title": "The Branch Overlook",
         "endOfStoryLine": false,
         "text": "As I stood on a slippery branch overlooking a magnificent waterfall, my eyes caught sight of a native village in the distance. There was a column of smoke rising from a campfire and I could just make out figures sat around it.",
         "image": "1030images/smoke.jpeg",
@@ -88,7 +88,7 @@ var storyLine = {
     },
     "fellFromTreeAndDed":{
         "id": "fellFromTreeAndDed",
-        "title": "You fell from The Tree",
+        "title": "Fell From The Tree",
         "endOfStoryLine": true,
         "causeOfDeath" : "Fell from tree",
         "text": "As I landed on the ground, I broke my neck and died.",
@@ -103,7 +103,7 @@ var storyLine = {
     },
     "fellFromTree":{
         "id": "fellFromTree",
-        "title": "You fell from The Tree",
+        "title": "Fell From The Tree",
         "endOfStoryLine": false,
         "text": "I landed on my left arm, which was still sore from the spider bite. I was in agony as I tried to get up.",
         "image": "1030images/dazed.png",
@@ -185,10 +185,10 @@ var storyLine = {
     },
     "floatOffWaterfallAndDed":{
         "id": "floatOffWaterfallAndDed",
-        "title": "You floated off the waterfall",
+        "title": "Rafts and Crocodiles",
         "endOfStoryLine": true,
         "causeOfDeath" : "Mauled by crocodile",
-        "text": "You floated downstream. On the way, you were attacked by a crocodile and died.",
+        "text": "You floated downstream. On the way, you were attacked by a crocodile and died.", //TODO : change text for this scene
         "image": "1030images/Game_over.png",
         "choices": [
             {
@@ -270,7 +270,7 @@ var storyLine = {
         "id": "caveFallDed",
         "title": "The Cave",
         "endOfStoryLine": true,
-        "causeOfDeath" : "Starvation in cave",
+        "causeOfDeath" : "Starvation In The Cave",
         "text": "As I walked into the cave, I was immediately blinded by the darkness. I stumbled around for a few minutes until I tripped over a rock and fell to the ground. I was unable to get up and died of starvation.",
         "image": "1030images/Game_over.png",
         "choices": [
@@ -283,7 +283,7 @@ var storyLine = {
     },
     "caveRopesDed":{
         "id": "caveRopesDed",
-        "title": "The Cave",
+        "title": "Deadly Stalacmites",
         "endOfStoryLine": true,
         "causeOfDeath" : "Tripped over rope",
         "text": "As I walked into the cave, I was immediately blinded by the darkness. I stumbled around for a few minutes until I tripped over mr ropes and fell to the ground. I hit my head on a stalacmite and died.",
@@ -331,10 +331,10 @@ var storyLine = {
     },
     "gaveUp":{
         "id": "gaveUp",
-        "title": "You gave up",
+        "title": "You Gave Up",
         "endOfStoryLine": true,
         "causeOfDeath" : "Gave up",
-        "text": "I gave up and died of starvation.",
+        "text": "I gave up and died of starvation.", // TODO : add more interesting text
         "image": "1030images/Game_over.png",
         "choices": [
             {
@@ -346,7 +346,7 @@ var storyLine = {
     },
     "returnToCampDed":{
         "id": "returnToCampDed",
-        "title": "You returned to camp",
+        "title": "A Deadly Return To Camp",
         "endOfStoryLine": true,
         "causeOfDeath" : "Snake bite",
         "text": "On my return journey, I noticed some strange markings on the ground. I followed them and found a cave. I entered the cave and found a treasure chest. I opened the chest and found a golden ring. I put the ring on my finger and it turned into a snake. The snake turned to me and whispered \"{name}, you are a fool\". As I pondered this, the snake bit me and I died.",
@@ -375,7 +375,7 @@ var storyLine = {
     },
     "topOfWaterfall":{
         "id": "topOfWaterfall",
-        "title": "Top Of The Waterfall",
+        "title": "Orangutan Encounter",
         "endOfStoryLine": false,
         "text": "My heart was pounding with both the exertion of the climb and anticipation of what awaited me. When I finally reached the summit, I caught a glimpse of a wild orangutan standing mere feet away from me. My initial fear turned to amazement as I gazed upon its majestic form. It then noticed my presence and swung away into the jungle. As I watched it swing away, my attention was drawn to smoke rising in the distance. Some kind of fire? This could be my chance to find out what happened to the others.",
         "image": "1030images/orangutan.jpg",
@@ -394,7 +394,7 @@ var storyLine = {
     },
     "monkeyDed":{
         "id": "monkeyDed",
-        "title": "Dead to the Monkeys", //Planet of the Apes reference
+        "title": "Smart Monkeys", //Planet of the Apes reference
         "endOfStoryLine": true,
         "causeOfDeath" : "Captured by smart monkeys",
         "text": "As I followed the monkey into the jungle, I could feel I was being watched. It turns out I was! There were hundreds of monkeys above me in the jungle canopy looking down on me. These weren't any ordinary monkeys... they were far more intelligent than I could ever imagine. The last thing I remembered was hearing the monkeys chant after I was captured by monkey with a homemade net.",
@@ -409,7 +409,7 @@ var storyLine = {
     },
     "berrieBush":{
         "id": "berrieBush",
-        "title": "Berrie bush",
+        "title": "The Berrie Bush",
         "endOfStoryLine": false,
         "text": "On my way towards the smoke I could see it was coming from a village. I also noticed some berries growing on a bush.",
         "image": "1030images/berry_bush.jpg",
@@ -428,7 +428,7 @@ var storyLine = {
     },
     "berries":{
         "id": "berries",
-        "title": "Berries",
+        "title": "The Berrie Bush",
         "endOfStoryLine": false,
         "text": "I carefully avoided the thorns and picked a few berries. The berries looked delicious and were a bright red. I didn't know whether to eat them now to ease my hunger or take them with me to the village ahead.",
         "image": "1030images/berry_bush.jpg", // the image "1030images/berries.jpg" wasn't working so just reused the image from the previous scene
@@ -447,7 +447,7 @@ var storyLine = {
     },
     "berriesEatenDed":{
         "id": "berriesEaten",
-        "title": "Berries",
+        "title": "Poisonous Berries",
         "endOfStoryLine": true,
         "causeOfDeath" : "Delicious berries",
         "text": "I ate the berries and they tasted delicious. I felt a sudden burst of energy from the sweet berries and decided to continue towards the village. As I began to continue on my jouney",
@@ -462,7 +462,7 @@ var storyLine = {
     },
     "village":{
         "id": "village",
-        "title": "Village",
+        "title": "The Village",
         "endOfStoryLine": false,
         "text": "I enter the village and the village leader is summoned to meet me. I am surrounded by the village inhabitants as the leader asks why I am here.",
         "image": "1030images/tribe_huts.jpg",
@@ -496,7 +496,7 @@ var storyLine = {
     },
     "villageWithBerries":{
         "id": "villageWithBerries",
-        "title": "Village With Berries",
+        "title": "The Village",
         "endOfStoryLine": false,
         "text": "I enter the village and the village leader is summoned to meet me. I am surrounded by the village inhabitants as the leader asks why I am here.",
         "image": "1030images/tribe.jpg",
@@ -515,7 +515,7 @@ var storyLine = {
     },
     "itsTreasonThenDed":{
         "id": "itsTreasonThenDed",
-        "title": "Its Treason Then",
+        "title": "It\'s Treason Then",
         "endOfStoryLine": true,
         "causeOfDeath" : "Treason",
         "text": "The village took my gift of the berries as an insult and assasination attempt. I am quickly hacked down by the guards.",
