@@ -12,7 +12,7 @@ var storyLine = {
                 "next": "gaveUp"
             },
             {
-                "text": "I'm going to survive! I'm going to find help!",
+                "text": "I'm going to survive!",
                 "emoji": "&#128526;",
                 "next": "junglePath"
             }
@@ -23,16 +23,16 @@ var storyLine = {
         "id": "junglePath",
         "title": "The Jungle Path",
         "endOfStoryLine": false,
-        "text": "As I walked along the narrow jungle path, I heard a low rumbling sound in the distance. My heart raced as I wondered what could be making such a noise. Was it a hungry predator, lurking in the thick foliage? Or was it just the sound of a passing storm? Suddenly, the rumbling grew louder and I realized it was coming from a nearby waterfall. Relieved, I continued on my way, grateful for the beauty and serenity of the jungle despite its many dangers.",
+        "text": "As I walked along a narrow jungle path, I heard a low rumbling sound in the distance. My heart raced as I wondered what could be making such a noise. Was it a hungry predator, lurking in the thick foliage? Or was it just the sound of a passing storm? Suddenly, the rumbling grew louder and I realized it was coming from a nearby waterfall. Relieved, I continued on my way, grateful for the beauty and serenity of the jungle despite its many dangers.",
         "image": "1030images/path.jpg",
         "choices": [
             {
-                "text": "Continue along the path and investigate the sound",
-                "emoji": "&#128561;",
+                "text": "Investigate the sound",
+                "emoji": "&#128373;",
                 "next": "waterfallOverlook"
             },
             {
-                "text": "Return to the camp and wait out the dangers ahead",
+                "text": "Return to the camp",
                 "emoji": "&#127957;",
                 "next": "returnToCampDed"
             }
@@ -48,7 +48,7 @@ var storyLine = {
         "choices": [
             {
                 "text": "Check out the waterfall.",
-                "emoji": "&#127939;",
+                "emoji": "&#127754;",
                 "next": "waterfallOasis"
             },
             {
@@ -125,7 +125,7 @@ var storyLine = {
         "choices": [
             {
                 "text": "Follow the mysterious path",
-                "emoji": "&#128166;",
+                "emoji": "&#128167;",
                 "next": "exploringBehindWaterfall"
             },
             {
@@ -163,7 +163,7 @@ var storyLine = {
         "choices": [
             {
                 "text": "Explore behind the waterfall",
-                "emoji": "&#128166;",
+                "emoji": "&#128167;",
                 "next": "exploringBehindWaterfallWithRopes"
             },
             {
@@ -172,12 +172,12 @@ var storyLine = {
                 "next": "floatOffWaterfallAndDed"
             },
             {
-                "text": "Attempt to catch fish with the ropes",
+                "text": "Catch fish with the ropes",
                 "emoji": "&#127907;",
                 "next": "fishing"
             },
             {
-                "text": "Attempt to climb the waterfall with the ropes",
+                "text": "Climb the waterfall with the ropes",
                 "emoji": "&#129495;",
                 "next": "climbingWaterfall"
             },
@@ -420,7 +420,7 @@ var storyLine = {
                 "next": "berries"
             },
             {
-                "text": "Anything that good-looking is obviously poisonous. Continue towards the village",
+                "text": "Continue towards the village",
                 "emoji": "&#128726;",
                 "next": "village"
             }
@@ -439,7 +439,7 @@ var storyLine = {
                 "next": "berriesEatenDed"
             },
             {
-                "text": "Classic story poison berries. Continue on instead.",
+                "text": "Continue towards the village",
                 "emoji": "&#128726;",
                 "next": "villageWithBerries"
             }
@@ -468,12 +468,12 @@ var storyLine = {
         "image": "1030images/tribe_huts.jpg",
         "choices": [
             {
-                "text": "Say you're a wizard",
+                "text": "Ask for help with the venom",
                 "emoji": "&#128591;",
                 "next": "treatment"
             },
             {
-                "text": "Ask for help with the venom",
+                "text": "Insult the Village Leader",
                 "emoji": "&#129324;",
                 "next": "banishedDed"
             }
@@ -502,12 +502,12 @@ var storyLine = {
         "image": "1030images/tribe.jpg",
         "choices": [
             {
-                "text": "Offer the berries as a gift and ask for help with the venom",
+                "text": "Offer the berries as a gift",
                 "emoji": "&#127873;",
                 "next": "itsTreasonThenDed"
             },
             {
-                "text": "Hide the berries and ask for help with the venom",
+                "text": "Hide the berries and ask for help",
                 "emoji": "&#128591;",
                 "next": "treatment"
             }
