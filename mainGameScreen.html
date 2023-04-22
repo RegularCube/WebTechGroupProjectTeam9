@@ -256,6 +256,7 @@
                 sceneDict = storyLine[sceneID];
                 if (sceneDict === undefined) {
                     if (sceneID == "stats") {
+                        sessionStorage.setItem("timeTaken",timeLeft);
                         window.open('stats.html','_self');
                     }
                     else {
