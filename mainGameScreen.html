@@ -445,8 +445,8 @@
             function displayTime() {
                 var minutes = ~~(timeLeft / 60); // Bit-wise operators make it the whole quotient of the division
                 var seconds = timeLeft % 60;
-                if (seconds == 0) {
-                    seconds = "00" // Ensures consistent formatting
+                if (seconds < 10) {
+                    seconds = "0" + seconds; // Ensures consistent formatting
                 }
                 document.getElementById('timeLeft').innerHTML = minutes + ":" + seconds;
             }
