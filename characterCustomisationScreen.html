@@ -168,14 +168,10 @@
             function setStoryCompletionDictionary() {
                 completionDict = {};
 
-                console.log("about to log scene id's for 2323131");
-
                 for (var sceneID in storyLine) {
-                    console.log("sceneID: " + sceneID);
                     sceneDict = storyLine[sceneID];
                     if (sceneDict["endOfStoryLine"]) {
                         completionDict[sceneID] = false;
-                        console.log(completionDict);
                     }
                 }
 
