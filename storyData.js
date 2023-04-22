@@ -415,9 +415,9 @@ var storyLine = {
         "image": "1030images/berry_bush.jpg",
         "choices": [
             {
-                "text": "Eat the berries",
+                "text": "Pick the berries",
                 "emoji": "&#127815;",
-                "next": "berriesEaten"
+                "next": "berries"
             },
             {
                 "text": "Anything that good-looking is obviously poisonous. Continue towards the village",
@@ -431,7 +431,7 @@ var storyLine = {
         "title": "Berries",
         "endOfStoryLine": false,
         "text": "I carefully avoided the thorns and picked a few berries. The berries looked delicious and were a bright red. I didn't know whether to eat them now to ease my hunger or take them with me to the village ahead.",
-        "image": "1030images/berries.jpg",
+        "image": "1030images/berry_bush.jpg", // the image "1030images/berries.jpg" wasn't working so just reused the image from the previous scene
         "choices": [
             {
                 "text": "Eat the berries",

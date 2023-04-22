@@ -9,7 +9,7 @@
             <p id="message"></p>
             <h2>Statistics</h2>
             <p id="stats"></p>
-            <button>🕹️ Play Again</button>
+            <button onclick="resetStory()">🕹️ Play Again</button>
         </div>
 
         <script>
@@ -70,6 +70,13 @@
 
             function formatSecondsToTimeString(seconds) {
 
+            }
+
+            function resetStory() {
+                sessionStorage.setItem('sceneID','start');
+                sessionStorage.setItem('playerAlive',true);
+                sessionStorage.setItem('causeOfDeath',null);
+                window.open('mainGameScreen.html','_self')
             }
         </script>
 

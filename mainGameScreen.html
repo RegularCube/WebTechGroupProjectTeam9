@@ -253,11 +253,9 @@
 
             function setUpScene() {
                 sceneID = sessionStorage.getItem('sceneID');
-                if (sceneID === null) {
-                    sceneID = "start";
-                    sessionStorage.setItem('sceneID',sceneID);
-                }
                 sceneDict = storyLine[sceneID];
+                console.log("scene ID in setup scene")
+                console.log(sceneID);
                 console.log("scene dict in setup scene")
                 console.log(sceneDict);
                 if (sceneDict === undefined) {
