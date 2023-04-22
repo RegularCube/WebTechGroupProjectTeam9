@@ -3,6 +3,7 @@
     <head>
         <title>Jungle Escape</title>
 
+        <link rel="stylesheet" href="flashlight.css" />
         <script type="text/javascript" src="storyData.js"></script>
 
         <style>
@@ -237,21 +238,21 @@
             <button onclick="reset()">reset</button>
         </div>
 
-        <div id="gameWrapper" class="text">
+        <div id="gameWrapper" class="">
 
             <div id="leftCol">
 
-                <div id="timerBox" class="test">
+                <div id="timerBox" class="">
                     <p id="timeLeft"></p>
                 </div>
     
-                <div id="imageBox" class="test">
+                <div id="imageBox" class="">
                     <img src="" alt="" id="sceneImage">
                 </div>
             </div>
 
             <div id="rightCol">
-                <div id="descriptionBox"  class="test">
+                <div id="descriptionBox"  class="">
                     <h1 id="sceneTitle"></h1>
                     <div id="sceneTextLocation"></div>
                 </div>
@@ -266,6 +267,10 @@
 
         <script>
             scene_number = 0;
+            let mouseX = 0;
+            let mouseY = 0;
+            document.addEventListener("mousemove", getMousePosition);
+
             // get character customisation
             // sessionStorage.getItem('sceplayerNameneID');
             // sessionStorage.getItem('playerHairColour');
@@ -321,6 +326,9 @@
                 //set image
                 updateImage(sceneDict);
 
+                //set image effects
+                updateImageEffect(sceneDict);
+
                 //set scene title
                 updateSceneTitle(sceneDict);
 
@@ -369,6 +377,18 @@
                 //set image
                 imgPath = sceneDict.image;
                 document.getElementById("sceneImage").src = imgPath;
+            }
+
+            function updateImageEffect(sceneDict) {
+                //set image effect
+                console.log("update image effect fiunction");
+                console.log(sceneDict);
+                gameWrapper = document.getElementById('gameWrapper');
+                gameWrapper.className = '';
+                if (sceneDict.imageEffect == "flashlight") {
+                    console.log("adding flahlight class");
+                    gameWrapper.classList.add("flashlightEffect");
+                }
             }
 
             function updateSceneTitle(sceneDict) {
@@ -523,6 +543,16 @@
                 }
                 return myList[index];
             }
+
+            //function used for flashlight effect
+            function getMousePosition(e) {
+                mouseX = e.pageX;
+                mouseY = e.pageY;
+
+                document.getElementById("gameWrapper").style.setProperty("--Xpos", mouseX + "px");
+                document.getElementById("gameWrapper").style.setProperty("--Ypos", mouseY + "px");
+            }
+
 
         </script>
 

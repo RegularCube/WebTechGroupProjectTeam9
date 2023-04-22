@@ -321,6 +321,7 @@ var storyLine = {
         "endOfStoryLine": false,
         "text": "I think I can make out a symbol on the wall. I wonder what it means?",
         "image": "1030images/in_cave.jpg",
+        "imageEffect": "flashlight",
         "choices": [
             {
                 "text": "Leave the cave",
