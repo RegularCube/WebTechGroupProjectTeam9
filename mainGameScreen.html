@@ -252,6 +252,7 @@
 
             <div id="rightCol">
                 <div id="descriptionBox"  class="test">
+                    <h1 id="sceneTitle"></h1>
                     <div id="sceneTextLocation"></div>
                 </div>
 
@@ -320,6 +321,9 @@
                 //set image
                 updateImage(sceneDict);
 
+                //set scene title
+                updateSceneTitle(sceneDict);
+
                 //set description
                 updateText(sceneDict);
 
@@ -355,6 +359,8 @@
                 scene_number += 1;
                 promptBox = document.getElementById("promptBox");
                 promptBox.innerHTML = null;
+                sceneText = document.getElementById("sceneTitle");
+                sceneText.innerHTML = null;
                 sceneText = document.getElementById("sceneTextLocation");
                 sceneText.innerHTML = null;
             }
@@ -363,6 +369,11 @@
                 //set image
                 imgPath = sceneDict.image;
                 document.getElementById("sceneImage").src = imgPath;
+            }
+
+            function updateSceneTitle(sceneDict) {
+                sceneTitle = sceneDict.title;
+                document.getElementById("sceneTitle").innerHTML = sceneTitle;
             }
 
             async function updateText(sceneDict) {
