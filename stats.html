@@ -131,7 +131,14 @@
 
                 timeString += ((seconds / 60) - (seconds / 60) % 1);
                 timeString += "m ";
-                timeString += (seconds % 60);
+                
+                seconds = seconds % 60;
+
+                if (seconds < 10) {
+                    timeString += "0" + seconds;
+                } else {
+                    timeString += seconds;
+                }
                 timeString += "s";
 
                 return timeString;
