@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Jungle Escape!</title>
 
 <head>
     <title>Jungle Escape</title>
@@ -47,9 +49,26 @@
                 align-items: stretch;
             }
 
-            #topBanner {
-                background-color: gray;
-            }
+        #topBannerLeft {
+            flex: 6;
+            font-family: Jungle;
+            color: #ecfdf5;
+            text-align: center;
+        }
+
+        #topBannerRight {
+            flex: 4;
+            padding: 10px;
+            text-align: right;
+        }
+
+        #topBannerRight button {
+            background-color: #6ee7b7;
+            border-radius: 15px;
+            color: black;
+            font-size: 1.5em;
+            padding: 10px;
+        }
 
             #gameWrapper{
                 display: flex;
@@ -428,7 +447,7 @@
                     choiceDiv.classList.add("choice");
                     let button = document.createElement("button");
                     button.type = "button";
-                    button.innerHTML = element.emoji + "    <b>" + element.text + "</b>";
+                    button.innerHTML = element.emoji + "    " + element.text;
                     button.onclick = buttonClick;
                     button.choiceNumber = index;
                     choiceDiv.appendChild(button);
@@ -467,7 +486,7 @@
                         timeLeft = 150;
                         break;
                     case "vhard":
-                        initialTimeLeft = 60;
+                        initialTimeLeft = 60;  
                         timeLeft = 60;
                         break;
                     default:
