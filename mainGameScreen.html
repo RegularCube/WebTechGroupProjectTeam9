@@ -3,10 +3,7 @@
     <head>
         <title>Jungle Escape</title>
 
-<head>
-    <title>Jungle Escape</title>
-
-    <script type="text/javascript" src="storyData.js"></script>
+        <script type="text/javascript" src="storyData.js"></script>
 
         <style>
         @font-face {
@@ -26,7 +23,7 @@
         }
 
         .text {
-            color: white;
+            color: black;
         }
 
         .unselectable {
@@ -38,16 +35,18 @@
             user-select: none;
         }
 
-            body {
-                min-height: 100vh;
-                display: flex;
-                gap: 10px;
-                background: pink;
-                margin: 0;
+        body {
+            min-height: 100vh;
+            display: flex;
+            background: #022c22;
+            margin: 0;
+            flex-direction: column;
+            align-items: stretch;
+        }
 
-                flex-direction: column;
-                align-items: stretch;
-            }
+        #topBanner {
+            display: flex;
+        }
 
         #topBannerLeft {
             flex: 6;
@@ -70,13 +69,14 @@
             padding: 10px;
         }
 
-            #gameWrapper{
-                display: flex;
-                gap: 10px;
-                align-items: stretch;
-                flex-wrap: wrap;
-                flex-grow: 1;
-            }
+        #gameWrapper {
+            display: flex;
+            gap: 20px;
+            align-items: stretch;
+            flex-wrap: wrap;
+            flex-grow: 1;
+            padding: 20px;
+        }
 
         #leftCol {
             display: flex;
@@ -84,12 +84,11 @@
             flex: 6;
         }
 
-            #rightCol{
-                display: flex;
-                flex-direction: column;
-                flex: 4;
-                background-color: aliceblue;
-            }
+        #rightCol {
+            display: flex;
+            flex-direction: column;
+            flex: 4;
+        }
 
         #imageBox {
             flex-grow: 1;
@@ -110,29 +109,35 @@
             color: white;
         }
 
-            #promptBox {
-                background-color:palegreen;
-                min-height: 200px; 
-            }
+        #promptBox {
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 10px;
+        }
 
-            #promptBox {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                gap: 2px;
-            }
-            .choice {
-                display: flex;
-                flex-direction: row;
-                gap: 10px;
+        .choice {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
 
-            }
-            .choice > button {
-                
-            }
-            .choice > p {
-                
-            }
+        }
+
+        .choice button {
+            background-color: #ecfdf5;
+            border-radius: 15px;
+            font-size: 20px;
+            color: #047857;
+            
+            /* Reused Corey's scale effect for hovering over the button */
+            transition: 400ms ease-in-out;
+        }
+
+        /* Reused Corey's scale effect for hovering over the button */
+        .choice button:hover{
+            transform: scale(1.5, 1.5);
+        }
 
         .popup {
             display: none;
@@ -269,15 +274,13 @@
                     </select>
                     <button id="close-accessibility-panel">Close</button>
                 </div>
-                <button id="startMusicButton">&#127925 Start Music</button>
-                <audio id="backgroundMusic" src="Chee Zee Jungle.mp3" preload="auto" loop></audio>
             </div>
-            
+
         </div>
 
-    <div id="gameWrapper" class="text">
+        <div id="gameWrapper" class="text">
 
-        <div id="leftCol">
+            <div id="leftCol">
 
                 <div id="timerBox" class="test">
                     <p id="timeLeft"></p>
@@ -297,11 +300,11 @@
                     <div id="sceneTextLocation"></div>
                 </div>
 
-            <div id="promptBox" class="test">
-                <h1>promptBox</h1>
-            </div>
+                <div id="promptBox" class="test">
+                    <h1>promptBox</h1>
+                </div>
         </div>
-
+    
         <script type="text/javascript" src="popups.js"></script>
         <script type="text/javascript" src="typewriter.js"></script>
 
@@ -315,14 +318,6 @@
             // game logic
             storyLine = personalize(storyLine, sessionStorage.getItem("playerName"), sessionStorage.getItem("playerHairColour"), sessionStorage.getItem("playerHeight"));
             setUpScene();
-
-            function reset() {
-                sceneID = "start";
-                sessionStorage.setItem('sceneID',sceneID);
-                sessionStorage.setItem('playerAlive',true);
-                sessionStorage.setItem('causeOfDeath',null);
-                setUpScene();
-            }
 
             function setUpScene() {
                 sceneID = sessionStorage.getItem('sceneID');
@@ -338,17 +333,17 @@
                 }
                 else {
                     if (sceneDict["causeOfDeath"]) {
-                        sessionStorage.setItem('causeOfDeath', sceneDict["causeOfDeath"]);
-                        sessionStorage.setItem('playerAlive', false);
+                        sessionStorage.setItem('causeOfDeath',sceneDict["causeOfDeath"]);
+                        sessionStorage.setItem('playerAlive',false);
 
 
-
+                    
                     }
                     if (sceneDict["endOfStoryLine"]) {
                         completionDict = JSON.parse(sessionStorage.getItem('completionDict'));
 
                         completionDict[sceneID] = true;
-                        sessionStorage.setItem('completionDict', JSON.stringify(completionDict));
+                        sessionStorage.setItem('completionDict',JSON.stringify(completionDict));
                     }
                     setElementsOnPage(sceneDict);
                     checkEndOfStoryLine();
@@ -370,11 +365,11 @@
 
                 //set prompts
                 updatePrompts(sceneDict);
-
-
+                
+                
             }
 
-            async function buttonClick(event) {
+            async function buttonClick(event){
                 choiceNumber = event.target.choiceNumber;
 
                 sceneID = sessionStorage.getItem('sceneID');
@@ -392,7 +387,7 @@
                         next = await pickRandomFromList(next);
                     }
                 }
-                sessionStorage.setItem('sceneID', next);
+                sessionStorage.setItem('sceneID',next);
                 setUpScene();
             }
 
@@ -425,17 +420,17 @@
                 var scene_text_name = "sceneText" + scene_number;
                 var descriptionBox = document.getElementById("descriptionBox");
                 var background_color = window.getComputedStyle(descriptionBox).getPropertyValue('background-color');
-                var text_element = "<p class=\"unselectable\" style=\"color:" + background_color + ";\" id=" + scene_text_name + "></p>";
+                var text_element = "<p class=\"unselectable\" style=\"color:" + background_color + ";\" id=" + scene_text_name +"></p>";
                 document.getElementById("sceneTextLocation").innerHTML += text_element;
 
                 if (Array.isArray(text)) {
                     text = await pickRandomFromList(text);
-
+                    
                 }
 
                 document.getElementById(scene_text_name).innerHTML = text;
 
-                typeWriter(scene_text_name, speed = 9);
+                typeWriter(scene_text_name, speed=9);
             }
 
             function updatePrompts(sceneDict) {
@@ -461,7 +456,7 @@
                 completionDict = JSON.parse(sessionStorage.getItem('completionDict'));
 
 
-
+                
             }
 
             // timer logic
@@ -476,7 +471,7 @@
             function getInitialTime() {
                 difficulty = sessionStorage.getItem('difficulty');
 
-                switch (difficulty) {
+                switch(difficulty) {
                     case "normal":
                         initialTimeLeft = 300;
                         timeLeft = 300;
@@ -516,22 +511,21 @@
                 timeLeft = getInitialTime();
                 displayTime();
                 timer = setInterval(decreaseTime, 1000);
-                sessionStorage.setItem('ranOutOfTime', false);
+                sessionStorage.setItem('ranOutOfTime',false);
 
             }
 
             function decreaseTime() {
-                if (timeLeft > 0) {
+                if (timeLeft>0) {
                     timeLeft--;
                     displayTime();
                     displayTimeBar();
                 } else {
                     clearInterval(timer);
                     document.getElementById('timeLeft').innerHTML = 'Time Up';
-                   
                     //add method here to be taken to end screen with indication that time ran out.
-                    sessionStorage.setItem('ranOutOfTime', true);
-                    sessionStorage.setItem("sceneID", "ranOutOfTime");
+                    sessionStorage.setItem('ranOutOfTime',true);
+                    sessionStorage.setItem("sceneID","ranOutOfTime");
                     setUpScene();
 
                 }
@@ -550,7 +544,7 @@
                     credentials: "same-origin", // include, *same-origin, omit
                     redirect: "follow", // manual, *follow, error
                     referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-
+                    
                 });
                 return response.json(); // parses JSON response into native JavaScript objects
             }
@@ -559,9 +553,9 @@
                 listLength = myList.length;//myList.length();
                 url = "http://andymcdowell.hosting.hal.davecutting.uk/1030_APIs/diceRollWithInputs.php";
                 qStr = "?diceFaceNumber=" + listLength + "&diceNumber=1"; //reducing by 1 so that it is the list index
-                APIResponse = await fetchURL(url + qStr);
+                APIResponse = await fetchURL(url+qStr);
                 randomPos = APIResponse[0]["result"]; //this API returns random numbers in a list so extract the value
-                return myList[randomPos - 1];
+                return myList[randomPos-1];
             }
 
             async function pickHeadsOrTails(myList) {
@@ -575,17 +569,8 @@
                 }
                 return myList[index];
             }
-         
-       
 
-
-            document.getElementById('startMusicButton').addEventListener('click', playBackgroundMusic);
-            function playBackgroundMusic() {
-                const backgroundMusic = document.getElementById('backgroundMusic');
-                backgroundMusic.play();
-            }
         </script>
 
-</body>
-
+    </body>
 </html>
