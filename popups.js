@@ -96,6 +96,9 @@ fontSelect.addEventListener('change', applyAccessibilityOptions);
       const myList = ['heads', 'tails'];
       const result = await pickHeadsOrTails(myList);
       document.getElementById("headsOrTailsResult").innerText = `The coin flip is: ${result}`;
+      setTimeout(() => {
+        document.getElementById("headsOrTailsResult").innerText = "";
+    }, 2000);
     });
 
 
