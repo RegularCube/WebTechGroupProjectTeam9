@@ -62,7 +62,7 @@ const openAccessibilityPanelButton = document.getElementById('open-accessibility
 const closeAccessibilityPanelButton = document.getElementById('close-accessibility-panel');
 const accessibilityPanel = document.getElementById('accessibility-panel');
 const textSizeInput = document.getElementById('text-size');
-const textColorInput = document.getElementById('text-color');
+const textColorInput = document.getElementById('text');
 const backgroundColorInput = document.getElementById('background-color');
 const fontSelect = document.getElementById('font-select');
 
