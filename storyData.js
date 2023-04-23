@@ -3,16 +3,16 @@ var storyLine = {
         "id": "start",
         "title": "The Abandoned Campsite",
         "endOfStoryLine": false,
-        "text": "As I opened my eyes, I realized I was in an abandoned campsite. The tents were torn, the fire pit was cold, and the jungle was eerily silent. Suddenly, a throbbing pain on my left arm brought me back to reality. Looking at it, I saw a spider bite with a red mark around it. My eyes caught the movement of a black spider with a red hourglass mark on its back scuttling away into the undergrowth. Panic set in as I realized I had no idea how I got there or how long I had been unconscious. With only a Swiss army knife, a torch and no clue of my whereabouts, fear overtook me. How was I going to survive?",
+        "text": "You eyes flitter open to birdsong and a headache like no other. You're in an abandoned campsite. Around you are torn tents, a cold fire pit, and a jungle wrapped in ominous silence. You try to remember what brought you here, but memories are scattered and tangled up. A throbbing pain on your arm interrupts your thinking. Spider bite. Your eyes catch the movement of a black spider with a red hourglass mark on its back scuttling away into the undergrowth. Just how long have you been unconscious? You have a Swiss army knife, a torch and no knowledge of where you are or why. You wonder if you have any hope of surviving at all.",
         "image": "1030images/campsite.jpg",
         "choices": [
             {
-                "text": "I'm going to die!",
+                "text": "I'm going to die",
                 "emoji": "&#128561;",
                 "next": "gaveUp"
             },
             {
-                "text": "I'm going to survive! I'm going to find help!",
+                "text": "I'm going to survive!",
                 "emoji": "&#128526;",
                 "next": "junglePath"
             }
@@ -23,16 +23,16 @@ var storyLine = {
         "id": "junglePath",
         "title": "The Jungle Path",
         "endOfStoryLine": false,
-        "text": "As I walked along the narrow jungle path, I heard a low rumbling sound in the distance. My heart raced as I wondered what could be making such a noise. Was it a hungry predator, lurking in the thick foliage? Or was it just the sound of a passing storm? Suddenly, the rumbling grew louder and I realized it was coming from a nearby waterfall. Relieved, I continued on my way, grateful for the beauty and serenity of the jungle despite its many dangers.",
+        "text": "As you walk along the narrow jungle path, you hear a low rumbling sound in the distance. You immediately wonder what could make such a noise. A pack of predators in frenzy from a fresh kill? Or a passing storm?",
         "image": "1030images/path.jpg",
         "choices": [
             {
-                "text": "Continue along the path and investigate the sound",
-                "emoji": "&#128561;",
+                "text": "Investigate the sound",
+                "emoji": "&#128373;",
                 "next": "waterfallOverlook"
             },
             {
-                "text": "Return to the camp and wait out the dangers ahead",
+                "text": "Return to the camp",
                 "emoji": "&#127957;",
                 "next": "returnToCampDed"
             }
@@ -43,12 +43,12 @@ var storyLine = {
         "id": "waterfallOverlook",
         "title": "The Waterfall Overlook",
         "endOfStoryLine": false,
-        "text": "Suddenly, the rumbling grew louder. I realized it was coming from a nearby waterfall. Relieved, I viewed the waterfall from above, grateful for the beauty and serenity of the jungle despite its many dangers. The breath-taking view of the waterfall was partially obstructed by the surrounding leaves. While the cascading water could still be seen, the area above the waterfall was obscured. The vibrant green leaves seemed to form a natural barrier between me and what lay beyond the waterfall. Despite leaves obstructing the view of the waterfall, there was an opportunity to climb up nearby branches and peer beyond the waterfall. The branches would act as a natural ladder, granting access to the higher vantage point. However, they did look slippery from the mist of the waterfall.",
+        "text": "You keep on track, and the rumbling grows louder. You round the corner to reveal a glorious vista of lush greenery, and at its centre a cliff with a huge waterfall. Relieved, you view the waterfall your position on the neighbouring hill. The breath-taking view is partially obstructed by the surrounding leaves, the area above the waterfall hidden. A huge tree beside the waterfalls pool has branches that reach up high enough to see what lies beyond it. They gleam from the noonday sun and the cascading waters.",
         "image": "1030images/top_of_waterfall.jpg",
         "choices": [
             {
                 "text": "Check out the waterfall.",
-                "emoji": "&#127939;",
+                "emoji": "&#127754;",
                 "next": "waterfallOasis"
             },
             {
@@ -62,7 +62,7 @@ var storyLine = {
         "id": "slipperyBranchOverlook",
         "title": "The Branch Overlook",
         "endOfStoryLine": false,
-        "text": "As I stood on a slippery branch overlooking a magnificent waterfall, my eyes caught sight of a native village in the distance. There was a column of smoke rising from a campfire and I could just make out figures sat around it.",
+        "text": "You climb the tree - it takes a while, and you nearly slip several times. At the top branch, you look out and catch sight of a native village in the distance, half a mile back from the cliff's edge. A column of smoke rises from a campfire, and you can just make out figures sat around it.",
         "image": "1030images/smoke.jpeg",
         "choices": [
             {
@@ -76,7 +76,7 @@ var storyLine = {
         "id": "fallingFromTree",
         "title": "Falling From The Tree",
         "endOfStoryLine": false,
-        "text": "As I climbed down the slippery branch, I lost my footing and fell from the tree.",
+        "text": "As you start to climb back down, distracted by the magnificent scenery, you lose your footing on a slippery branch and begin to plummet towards the ground. Despite knowing these moments will likely be your last, as the ground rises to meet you, you admire the waterfall more and think \"Hey, at least I didn't die from the poison after all\"",
         "image": "1030images/look_up_trees.jpg",
         "choices": [
             {
@@ -91,7 +91,7 @@ var storyLine = {
         "title": "Fell From The Tree",
         "endOfStoryLine": true,
         "causeOfDeath" : "Fell from tree",
-        "text": "As I landed on the ground, I broke my neck and died.",
+        "text": "The pool at the tree's base is actually deep enough for someone falling from the tree's full height to survive. In its centre is a single jagged rock, less than half a metre in diameter. Against all odds, you manage to hit it, and are skewered where you land. Native parents for centuries after use your horrific death as a reminder to their children to not climb the tree, and also to eat their vegetables.",
         "image": "1030images/Game_over.png",
         "choices": [
             {
@@ -105,11 +105,11 @@ var storyLine = {
         "id": "fellFromTree",
         "title": "Fell From The Tree",
         "endOfStoryLine": false,
-        "text": "I landed on my left arm, which was still sore from the spider bite. I was in agony as I tried to get up.",
+        "text": "The pool at the tree's base is deeper than you thought, although impact with its surface still makes your arm hurt like crazy.",
         "image": "1030images/dazed.png",
         "choices": [
             {
-                "text": "Get up and continue on my way.",
+                "text": "Swim out and continue on your way.",
                 "emoji": "&#11014;",
                 "next": "waterfallOasis"
             }
@@ -120,16 +120,16 @@ var storyLine = {
         "title": "The Waterfall Oasis",
         "endOfStoryLine": false,
         // there are vines hanging from the waterfall and fish in the river below the waterfall. scene is lush and green. There is a small path leading behind the waterfall.
-        "text": "The area beneath the waterfall is an oasis. The lush jungle surrounds the giant cliff where the waterfall is. There are several vines hanging off nearby trees, fish swimming nearby and a small path which looks to go behind the waterfall...",
+        "text": "The area beneath the waterfall is an oasis. The lush jungle surrounds the giant cliff where the waterfall is. Thick vines hang limply from nearby trees, fish swim in the waterfall-fed pool, and a small path seems to go behind the waterfall...",
         "image": "1030images/waterfall.jpg",
         "choices": [
             {
                 "text": "Follow the mysterious path",
-                "emoji": "&#128166;",
+                "emoji": "&#128167;",
                 "next": "exploringBehindWaterfall"
             },
             {
-                "text": "Create a raft and float down the river",
+                "text": "Create a raft",
                 "emoji": "&#128758;",
                 "next": "confusedRaftBuilder"
             },
@@ -144,7 +144,7 @@ var storyLine = {
         "id": "confusedRaftBuilder",
         "title": "The Confused Raft Builder",
         "endOfStoryLine": false,
-        "text": "You tried to build a raft, but you didn't have any rope. You were confused and didn't know what to do next.",
+        "text": "You used to be quite the raft-builder back in Scouts, and you find loose wood in no time. But you have nothing to tie it together with, and just stand there confused. A passing fish laughs at you.",
         "image": "1030images/logs.jpg",
         "choices": [
             {
@@ -158,12 +158,12 @@ var storyLine = {
         "id": "waterfallOasisWithRopes",
         "title": "The Waterfall Oasis",
         "endOfStoryLine": false,
-        "text": "The area beneath the waterfall is an oasis. The lush jungle surrounds the giant cliff where the waterfall is. With a rope in hand, there are fish swimming nearby and a small path which looks to go behind the waterfall. With the rope it looks possible that the waterfall could be climbed...",
+        "text": "The area beneath the waterfall is an oasis. The lush jungle surrounds the giant cliff where the waterfall is. You hold your ropes close to your chest next to the now naked, sad trees, as fish swim in the waterfall-fed pool, and a small path seems to go behind the waterfall...",
         "image": "1030images/waterfall_pool.jpg",
         "choices": [
             {
                 "text": "Explore behind the waterfall",
-                "emoji": "&#128166;",
+                "emoji": "&#128167;",
                 "next": "exploringBehindWaterfallWithRopes"
             },
             {
@@ -172,12 +172,12 @@ var storyLine = {
                 "next": "floatOffWaterfallAndDed"
             },
             {
-                "text": "Attempt to catch fish with the ropes",
+                "text": "Catch fish with the ropes",
                 "emoji": "&#127907;",
                 "next": "fishing"
             },
             {
-                "text": "Attempt to climb the waterfall with the ropes",
+                "text": "Climb the waterfall with the ropes",
                 "emoji": "&#129495;",
                 "next": "climbingWaterfall"
             },
@@ -188,7 +188,7 @@ var storyLine = {
         "title": "Rafts and Crocodiles",
         "endOfStoryLine": true,
         "causeOfDeath" : "Mauled by crocodile",
-        "text": "You floated downstream. On the way, you were attacked by a crocodile and died.", //TODO : change text for this scene
+        "text": "You floated downstream. On the way, you were attacked by a crocodile and died.",
         "image": "1030images/Game_over.png",
         "choices": [
             {
@@ -212,7 +212,7 @@ var storyLine = {
             "Your fishing skills are improving, you're sure to get lucky soon! And no, you didn't catch one.",
             "You missed, you were two busy thinking of what garnish would go best with raw fish.",
             "You missed. Your stomach growls. You growl back.",
-            "You throw and the lasso grabs a big one. You eagerly pull it back, with such force that it comes hurtling towards you. The fish slaps your arm and the bite stings like crazy. Amidst the pain the fish runs away into the bushes, then remembers itself and gets back in the water."
+            "You throw and the lasso grabs a big one. You eagerly pull it back, but the fish slaps your arm and the bite stings like crazy. Amidst the pain the fish runs away into the bushes, then remembers itself and gets back in the water."
         ],
         "image": "1030images/fish_pool.png",
         "choices": [
@@ -232,7 +232,7 @@ var storyLine = {
         "id": "exploringBehindWaterfall",
         "title": "Exploring Behind The Waterfall",
         "endOfStoryLine": false,
-        "text": "As I walked behind the cascading waterfall, I could hear rushing water all around me. The misty spray cooled my face and dripped from my {hairColor} hair as I made my way deeper along the path behind the falls. Suddenly I notice a cave entrance which had previously hidden by the waterfall.",
+        "text": "As you walk behind the cascading waterfall, you hear the deafening drone of rushing water all around you. The misty spray cools my face and drips from your {hairColor} hair. As you follow the path further, you notice a cave entrance which had previously been hidden by the waterfall.",
         "image": "1030images/waterfall_cave.jpg",
         "choices": [
             {
@@ -251,7 +251,7 @@ var storyLine = {
         "id": "exploringBehindWaterfallWithRopes",
         "title": "Exploring Behind The Waterfall",
         "endOfStoryLine": false,
-        "text": "As I walked behind the cascading waterfall, I could hear rushing water all around me. The misty spray cooled my face and dripped from my {hairColor} hair as I made my way deeper along the path behind the falls. Suddenly I notice a cave entrance which had previously hidden by the waterfall.",
+        "text": "As you walk behind the cascading waterfall, you hear the deafening drone of rushing water all around you. The misty spray cools my face and drips from your {hairColor} hair. As you follow the path further, you notice a cave entrance which had previously been hidden by the waterfall.",
         "image": "1030images/waterfall_cave.jpg",
         "choices": [
             {
@@ -270,7 +270,7 @@ var storyLine = {
         "id": "caveFallDed",
         "title": "The Cave",
         "endOfStoryLine": true,
-        "causeOfDeath" : "Starvation In The Cave",
+        "causeOfDeath" : "Starvation in cave",
         "text": "As I walked into the cave, I was immediately blinded by the darkness. I stumbled around for a few minutes until I tripped over a rock and fell to the ground. I was unable to get up and died of starvation.",
         "image": "1030images/Game_over.png",
         "choices": [
@@ -286,7 +286,7 @@ var storyLine = {
         "title": "Deadly Stalacmites",
         "endOfStoryLine": true,
         "causeOfDeath" : "Tripped over rope",
-        "text": "As I walked into the cave, I was immediately blinded by the darkness. I stumbled around for a few minutes until I tripped over mr ropes and fell to the ground. I hit my head on a stalacmite and died.",
+        "text": "Deep, cold, black darkness greats you as you enter the cave. Through touch and sound, you quickly discover this cave is a whole vast network of tunnels that go on for miles. Eventually you find a deep pit with a strange light at the bottom. You grin - good thing you have your trusty ropes. You begin absailing down. Soon you notice a crumpled, blood spattered envelope wedged in a crack. It has {name} written on the front. You read: \"It's time you knew the truth about me and the others, before its too late, the terrible truth we've hidden from you all this time. The truth is-\" And at that moment the rope snaps, because it's just some vines you twisted together. You fall and die.",
         "image": "1030images/Game_over.png",
         "choices": [
             {
@@ -300,7 +300,7 @@ var storyLine = {
         "id": "cave",
         "title": "The Cave",
         "endOfStoryLine": false,
-        "text": "As I peered inside, my heart raced with excitement. The sound of my own footsteps echoed off the walls as I explored the damp, rocky terrain. However, I couldn’t see much, maybe I could use my torch...",
+        "text": "Deep, cold, black darkness greats you as you enter the cave. You consider feeling your way around, but isn't there an easier way...?",
         "image": "1030images/in_cave.jpg",
         "choices": [
             {
@@ -319,7 +319,7 @@ var storyLine = {
         "id": "caveWithTorch",
         "title": "The Cave",
         "endOfStoryLine": false,
-        "text": "I think I can make out a symbol on the wall. I wonder what it means?",
+        "text": "You can make out some kind of symbol on the wall. It's a heart shaped, jagged and crooked, with 'Ben + Molly 4-Evah' written in the middle. You have no idea what this ancient, perhaps sacred symbolism means, but it fills you with determination.",
         "image": "1030images/in_cave.jpg",
         "choices": [
             {
@@ -334,7 +334,7 @@ var storyLine = {
         "title": "You Gave Up",
         "endOfStoryLine": true,
         "causeOfDeath" : "Gave up",
-        "text": "I gave up and died of starvation.", // TODO : add more interesting text
+        "text": "I gave up and died of starvation.",
         "image": "1030images/Game_over.png",
         "choices": [
             {
@@ -349,8 +349,7 @@ var storyLine = {
         "title": "A Deadly Return To Camp",
         "endOfStoryLine": true,
         "causeOfDeath" : "Snake bite",
-        "text": "On my return journey, I noticed some strange markings on the ground. I followed them and found a cave. I entered the cave and found a treasure chest. I opened the chest and found a golden ring. I put the ring on my finger and it turned into a snake. The snake turned to me and whispered \"{name}, you are a fool\". As I pondered this, the snake bit me and I died.",
-        "image": "1030images/Game_over.png",
+        "text": "On your return journey, you notice some strange markings on the ground. The markings lead to a strange grove with a snake sitting on a sundial in the centre. \You're such a fool, {name}\", it says, \"did you forget snake and spider venom cancel each-other out?\" You feel like a right idiot - how'd you forget something like that? \"Don't worry, we all make mistakes. Where would you like it?\" Tearful with gratitude, you present your neck. After a very, very short amount of time you come to find that snakes can lie.",
         "choices": [
             {
                 "text": "Continue",
@@ -363,7 +362,7 @@ var storyLine = {
         "id": "climbingWaterfall",
         "title": "Climbing The Waterfall",
         "endOfStoryLine": false,
-        "text": "I began to climb, grabbing onto the jagged rocks jutting out from the water. It was a slow and cautious ascent, but every step brought me closer to the top. The slick rocks made footing difficult meaning it never felt safe.",
+        "text": "You begin your ascent, grabbing onto the jagged rocks jutting out from the water. The slick rocks makes footing difficult, but with every pang of pain from your arm you climb ever faster to the top.",
         "image": "1030images/look_up_cliff.jpg",
         "choices": [
             {
@@ -377,7 +376,7 @@ var storyLine = {
         "id": "topOfWaterfall",
         "title": "Orangutan Encounter",
         "endOfStoryLine": false,
-        "text": "My heart was pounding with both the exertion of the climb and anticipation of what awaited me. When I finally reached the summit, I caught a glimpse of a wild orangutan standing mere feet away from me. My initial fear turned to amazement as I gazed upon its majestic form. It then noticed my presence and swung away into the jungle. As I watched it swing away, my attention was drawn to smoke rising in the distance. Some kind of fire? This could be my chance to find out what happened to the others.",
+        "text": "Your heart pounds with the exertion of the climb, the anticipation of what awaited me. Or maybe it's spider poison spreading through your system. You catch a glimpse of a wild orangutan standing mere feet away from you. Initial fear turns to amazement as you gaze upon its majestic form. It notices you and begins raising a hand. Cross-species connection? It flips the bird and swings into the jungle. As you watch it swing away, your attention's drawn to smoke rising not far off. Some kind of fire?",
         "image": "1030images/orangutan.jpg",
         "choices": [
             {
@@ -396,8 +395,8 @@ var storyLine = {
         "id": "monkeyDed",
         "title": "Smart Monkeys", //Planet of the Apes reference
         "endOfStoryLine": true,
-        "causeOfDeath" : "Captured by smart monkeys",
-        "text": "As I followed the monkey into the jungle, I could feel I was being watched. It turns out I was! There were hundreds of monkeys above me in the jungle canopy looking down on me. These weren't any ordinary monkeys... they were far more intelligent than I could ever imagine. The last thing I remembered was hearing the monkeys chant after I was captured by monkey with a homemade net.",
+        "causeOfDeath" : "Out-matched by superior beings",
+        "text": "You run after the monkey as it swings speedily into the rainforest. The trees grow thicker, the foliage denser, and soon its dark and you've lost sight of it. Faint \"Oook\" noises make you look up. Hundreds of them sit there, staring at you - no, through you. One drops down. It has what looks to be a make-shift gun. You laugh at such an adorable attempt to mimick mankind. It rolls its eyes and shoots you right through the heart.",
         "image": "1030images/Game_over.png",
         "choices": [
             {
@@ -411,16 +410,16 @@ var storyLine = {
         "id": "berrieBush",
         "title": "The Berrie Bush",
         "endOfStoryLine": false,
-        "text": "On my way towards the smoke I could see it was coming from a village. I also noticed some berries growing on a bush.",
+        "text": "You make for the smoke's origin, and a village starts coming into view. You also notice some good-looking berries growing from a nearby bush.",
         "image": "1030images/berry_bush.jpg",
         "choices": [
             {
-                "text": "Pick the berries",
+                "text": "Take the berries",
                 "emoji": "&#127815;",
-                "next": "berries"
+                "next": "berriesEaten"
             },
             {
-                "text": "Anything that good-looking is obviously poisonous. Continue towards the village",
+                "text": "Continue towards the village",
                 "emoji": "&#128726;",
                 "next": "village"
             }
@@ -430,8 +429,8 @@ var storyLine = {
         "id": "berries",
         "title": "The Berrie Bush",
         "endOfStoryLine": false,
-        "text": "I carefully avoided the thorns and picked a few berries. The berries looked delicious and were a bright red. I didn't know whether to eat them now to ease my hunger or take them with me to the village ahead.",
-        "image": "1030images/berry_bush.jpg", // the image "1030images/berries.jpg" wasn't working so just reused the image from the previous scene
+        "text": "You carefully avoid the thorns and pick a few. The berries look delicious, more delicious than any berries you've ever seen, bright red and glossy. You feel a strong compulsion to eat them now.",
+        "image": "1030images/berries.jpg",
         "choices": [
             {
                 "text": "Eat the berries",
@@ -439,7 +438,7 @@ var storyLine = {
                 "next": "berriesEatenDed"
             },
             {
-                "text": "Classic story poison berries. Continue on instead.",
+                "text": "No way, this is classic storybook stuff",
                 "emoji": "&#128726;",
                 "next": "villageWithBerries"
             }
@@ -450,7 +449,7 @@ var storyLine = {
         "title": "Poisonous Berries",
         "endOfStoryLine": true,
         "causeOfDeath" : "Delicious berries",
-        "text": "I ate the berries and they tasted delicious. I felt a sudden burst of energy from the sweet berries and decided to continue towards the village. As I began to continue on my jouney",
+        "text": "You eat the berries. They're divine. You have some more. Soon the bush is completely bare. You wait a while, and are honestly surprized they didn't poison you after all. Revitalized by such a healthy snack, you continue on.",
         "image": "1030images/Game_over.png",
         "choices": [
             {
@@ -464,16 +463,16 @@ var storyLine = {
         "id": "village",
         "title": "The Village",
         "endOfStoryLine": false,
-        "text": "I enter the village and the village leader is summoned to meet me. I am surrounded by the village inhabitants as the leader asks why I am here.",
+        "text": "Faces peer round the doorways of squat huts and you enter the village. A man dressed impressively in furs and bright feathers approaches you. \"What is your business here?\"",
         "image": "1030images/tribe_huts.jpg",
         "choices": [
             {
-                "text": "Say you're a wizard",
+                "text": "Ask for help with the venom",
                 "emoji": "&#128591;",
                 "next": "treatment"
             },
             {
-                "text": "Ask for help with the venom",
+                "text": "Insult the Village Leader",
                 "emoji": "&#129324;",
                 "next": "banishedDed"
             }
@@ -498,16 +497,16 @@ var storyLine = {
         "id": "villageWithBerries",
         "title": "The Village",
         "endOfStoryLine": false,
-        "text": "I enter the village and the village leader is summoned to meet me. I am surrounded by the village inhabitants as the leader asks why I am here.",
+        "text": "Faces peer round the doorways of squat huts and you enter the village. A man dressed impressively in furs and bright feathers approaches you. \"What is your business here?\"",
         "image": "1030images/tribe.jpg",
         "choices": [
             {
-                "text": "Offer the berries as a gift and ask for help with the venom",
+                "text": "Offer the berries as a gift",
                 "emoji": "&#127873;",
                 "next": "itsTreasonThenDed"
             },
             {
-                "text": "Hide the berries and ask for help with the venom",
+                "text": "Hide the berries and ask for help",
                 "emoji": "&#128591;",
                 "next": "treatment"
             }
@@ -518,7 +517,7 @@ var storyLine = {
         "title": "It\'s Treason Then",
         "endOfStoryLine": true,
         "causeOfDeath" : "Treason",
-        "text": "The village took my gift of the berries as an insult and assasination attempt. I am quickly hacked down by the guards.",
+        "text": "The village takes your gift of the berries as an insult and assassination attempt. They say any berries that good looking are obviously poisonous, and you really can't disagree. They're tired of killing outsiders all the time, so they form a committee for new execution methods. After three days, you're killed with a genious combination of a bath of gravy, 3 double-A batteries and a spoon.",
         "image": "1030images/Game_over.png",
         "choices": [
             {
@@ -546,7 +545,7 @@ var storyLine = {
         "id": "ranOutOfTime",
         "title": "Venom Killed You",
         "endOfStoryLine": true,
-        "causeOfDeath" : "Succumned to the venom",
+        "causeOfDeath" : "Succumbed to the venom",
         "text": "The venom killed you",
         "image": "1030images/Game_over.png",
         "choices": [
