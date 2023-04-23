@@ -54,13 +54,13 @@
             color: #ecfdf5;
             text-align: center;
         }
-        
+
         #topBannerRight {
             flex: 4;
             padding: 10px;
             text-align: right;
         }
-        
+
         #topBannerRight button {
             background-color: #6ee7b7;
             border-radius: 15px;
@@ -249,33 +249,33 @@
             </div>
             <div id="topBannerRight">
                 <button onclick="showPopup()">&#128221 NoteBook</button>
-            <div class="popup" id="popup">
-                <h2>Notebook</h2>
-                <textarea id="note-input" placeholder="Write your note here..."></textarea>
-                <button id="save-note-button">Save Note</button>
-                <ul id="notes-list"></ul>
-                <button onclick="hidePopup()">Close Popup</button>
-            </div>
-            <button id="open-accessibility-panel">&#127757 Accessibility</button>
+                <div class="popup" id="popup">
+                    <h2>Notebook</h2>
+                    <textarea id="note-input" placeholder="Write your note here..."></textarea>
+                    <button id="save-note-button">Save Note</button>
+                    <ul id="notes-list"></ul>
+                    <button onclick="hidePopup()">Close Popup</button>
+                </div>
+                <button id="open-accessibility-panel">&#127757 Accessibility</button>
 
-            <div id="accessibility-panel" style="display: none;">
-                <h2>Accessibility Options</h2>
-                <label for="text-size">Text Size:</label>
-                <input type="range" id="text-size" min="14" max="24" value="16">
-                <label for="text-color">Text Color:</label>
-                <input type="color" id="text-color" value="#000000">
-                <label for="background-color">Background Color:</label>
-                <input type="color" id="background-color" value="#808080">
-                <label for="font-select">Font:</label>
-                <select id="font-select">
-                    <option value="Arial">Arial</option>
-                    <option value="Verdana">Verdana</option>
-                    <option value="OpenDyslexic">OpenDyslexic</option>
-                </select>
-                <button id="close-accessibility-panel">Close</button>
+                <div id="accessibility-panel" style="display: none;">
+                    <h2>Accessibility Options</h2>
+                    <label for="text-size">Text Size:</label>
+                    <input type="range" id="text-size" min="14" max="24" value="16">
+                    <label for="text-color">Text Color:</label>
+                    <input type="color" id="text-color" value="#000000">
+                    <label for="background-color">Background Color:</label>
+                    <input type="color" id="background-color" value="#808080">
+                    <label for="font-select">Font:</label>
+                    <select id="font-select">
+                        <option value="Arial">Arial</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="OpenDyslexic">OpenDyslexic</option>
+                    </select>
+                    <button id="close-accessibility-panel">Close</button>
+                </div>
             </div>
-            </div>
-            
+
         </div>
 
         <div id="gameWrapper" class="text">
@@ -442,7 +442,7 @@
                     choiceDiv.classList.add("choice");
                     let button = document.createElement("button");
                     button.type = "button";
-                    button.innerHTML = element.emoji + "    <b>" + element.text + "</b>";
+                    button.innerHTML = element.emoji + "    " + element.text;
                     button.onclick = buttonClick;
                     button.choiceNumber = index;
                     choiceDiv.appendChild(button);
@@ -481,7 +481,7 @@
                         timeLeft = 150;
                         break;
                     case "vhard":
-                        initialTimeLeft = 60;
+                        initialTimeLeft = 60;  
                         timeLeft = 60;
                         break;
                     default:
