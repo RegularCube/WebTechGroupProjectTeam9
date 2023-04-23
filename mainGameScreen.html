@@ -275,6 +275,7 @@
                     <button id="close-accessibility-panel">Close</button>
                 </div>
                 <button id="startMusicButton">&#127925 Start Music</button>
+                <button id="pauseMusicButton">&#9208 Pause Music</button>
                 <audio id="backgroundMusic" src="Chee Zee Jungle.mp3" preload="auto" loop></audio>
             </div>
             
@@ -574,10 +575,16 @@
             }
 
             document.getElementById('startMusicButton').addEventListener('click', playBackgroundMusic);
+            document.getElementById('pauseMusicButton').addEventListener('click', pauseBackgroundMusic);
+
             function playBackgroundMusic() {
                 const backgroundMusic = document.getElementById('backgroundMusic');
                 backgroundMusic.play();
             }
+            function pauseBackgroundMusic() {
+            const backgroundMusic = document.getElementById('backgroundMusic');
+            backgroundMusic.pause();
+}
         </script>
 
     </body>
