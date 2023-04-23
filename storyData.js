@@ -188,7 +188,7 @@ var storyLine = {
         "title": "Rafts and Crocodiles",
         "endOfStoryLine": true,
         "causeOfDeath" : "Mauled by crocodile",
-        "text": "You floated downstream. On the way, you were attacked by a crocodile and died.",
+        "text": "You build a raft in no time and are soon floating merrily down the stream. A crocodile rises from the water in front of you. \"I think I heard a song about this\", you say, and are then violently devoured.",
         "image": "1030images/Game_over.png",
         "choices": [
             {
@@ -270,8 +270,8 @@ var storyLine = {
         "id": "caveFallDed",
         "title": "The Cave",
         "endOfStoryLine": true,
-        "causeOfDeath" : "Starvation in cave",
-        "text": "As I walked into the cave, I was immediately blinded by the darkness. I stumbled around for a few minutes until I tripped over a rock and fell to the ground. I was unable to get up and died of starvation.",
+        "causeOfDeath" : "King of the caves",
+        "text": "Deep, cold, black darkness greats you as you enter the cave. Through touch and sound, you quickly discover this cave is a whole vast network of tunnels that go on for miles. Eventually you find a deep pit with a strange light at the bottom. With no way down, you turn around. A shadowy figure is now in front of you, a gun in one hand and a machete in the other. \"Answer my riddle correctly\", he says, \"and I'll spare you\". \"No thanks\", you say \"I never much liked riddles\". He shrugs and pushes you down the pit. You die.",
         "image": "1030images/Game_over.png",
         "choices": [
             {
@@ -334,7 +334,7 @@ var storyLine = {
         "title": "You Gave Up",
         "endOfStoryLine": true,
         "causeOfDeath" : "Gave up",
-        "text": "I gave up and died of starvation.",
+        "text": "You decide to give up. You sit there and do nothing. Days pass, and you die of thirst.",
         "image": "1030images/Game_over.png",
         "choices": [
             {
