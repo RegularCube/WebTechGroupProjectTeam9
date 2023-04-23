@@ -104,13 +104,13 @@
                 stats.innerHTML = "Endings Found: " + endingsFound + "/" + totalEndings;
                 stats.innerHTML += "<br>Time Remaining: " + formatSecondsToTimeString(timeTaken);
 
-                if (difficulty = "easy") {
+                if (difficulty == "easy") {
                     difficulty = "Tourist";
                 }
-                if (difficulty = "medium") {
+                if (difficulty == "medium") {
                     difficulty = "Explorer";
                 }
-                if (difficulty = "hard") {
+                if (difficulty == "hard") {
                     difficulty = "Jungle Warrior";
                 }
                 stats.innerHTML += "<br>Difficulty: " + difficulty;
