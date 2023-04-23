@@ -561,9 +561,11 @@ var storyLine = {
 function personalize(storyTree, name, hairColor, height) {
     for (storyNodeKey in storyTree) {
         storyNode = storyTree[storyNodeKey];
-        storyNode["text"] = String(storyNode["text"]).replace("{name}", name);
-        storyNode["text"] = String(storyNode["text"]).replace("{hairColor}", hairColor);
-        storyNode["text"] = String(storyNode["text"]).replace("{height}", height);
+        if (typeof storyNode["text"] == typeof "a") {
+            storyNode["text"] = storyNode["text"].replace("{name}", name);
+            storyNode["text"] = storyNode["text"].replace("{hairColor}", hairColor);
+            storyNode["text"] = storyNode["text"].replace("{height}", height);
+        }
     }
     return storyTree;
 }
