@@ -3,7 +3,7 @@ var storyLine = {
         "id": "start",
         "title": "The Abandoned Campsite",
         "endOfStoryLine": false,
-        "text": "You eyes flitter open to birdsong and a headache like no other. You're in an abandoned campsite. Around you are torn tents, a cold fire pit, and a jungle wrapped in ominous silence. You try to remember what brought you here, but memories are scattered and tangled up. A throbbing pain on your arm interrupts your thinking. Spider bite. Your eyes catch the movement of a black spider with a red hourglass mark on its back scuttling away into the undergrowth. Just how long have you been unconscious? You have a Swiss army knife, a torch and no knowledge of where you are or why. You wonder if you have any hope of surviving at all.",
+        "text": "Your eyes flitter open to birdsong and a headache like no other. You're in an abandoned campsite. Around you are torn tents, a cold fire pit, and a jungle wrapped in ominous silence. You try to remember what brought you here, but memories are scattered and tangled up. A throbbing pain on your arm interrupts your thinking. Spider bite. Your eyes catch the movement of a black spider with a red hourglass mark on its back scuttling away into the undergrowth. Just how long have you been unconscious? You have a Swiss army knife, a torch and no knowledge of where you are or why. You wonder if you have any hope of surviving at all.",
         "image": "1030images/campsite.jpg",
         "choices": [
             {
@@ -43,7 +43,7 @@ var storyLine = {
         "id": "waterfallOverlook",
         "title": "The Waterfall Overlook",
         "endOfStoryLine": false,
-        "text": "You keep on track, and the rumbling grows louder. You round the corner to reveal a glorious vista of lush greenery, and at its centre a cliff with a huge waterfall. Relieved, you view the waterfall your position on the neighbouring hill. The breath-taking view is partially obstructed by the surrounding leaves, the area above the waterfall hidden. A huge tree beside the waterfalls pool has branches that reach up high enough to see what lies beyond it. They gleam from the noonday sun and the cascading waters.",
+        "text": "You keep on track, and the rumbling grows louder. You round the corner to reveal a glorious vista of lush greenery, and at its centre a cliff with a huge waterfall. Relieved, you view the waterfall your position on the neighboring hill. The breath-taking view is partially obstructed by the surrounding leaves, the area above the waterfall hidden. A huge tree beside the waterfalls pool has branches that reach up high enough to see what lies beyond it. They gleam from the noonday sun and the cascading waters.",
         "image": "1030images/top_of_waterfall.jpg",
         "choices": [
             {
@@ -487,7 +487,7 @@ var storyLine = {
         "image": "1030images/Game_over.png",
         "choices": [
             {
-                "text": "Coninue",
+                "text": "Continue",
                 "emoji": "&#128056;",
                 "next": "stats"
             },
@@ -517,7 +517,7 @@ var storyLine = {
         "title": "It\'s Treason Then",
         "endOfStoryLine": true,
         "causeOfDeath" : "Treason",
-        "text": "The village takes your gift of the berries as an insult and assassination attempt. They say any berries that good looking are obviously poisonous, and you really can't disagree. They're tired of killing outsiders all the time, so they form a committee for new execution methods. After three days, you're killed with a genious combination of a bath of gravy, 3 double-A batteries and a spoon.",
+        "text": "The village takes your gift of the berries as an insult and assassination attempt. They say any berries that good looking are obviously poisonous, and you really can't disagree. They're tired of killing outsiders all the time, so they form a committee for new execution methods. After three days, you're killed with a genius combination of a bath of gravy, 3 double-A batteries and a spoon.",
         "image": "1030images/Game_over.png",
         "choices": [
             {
@@ -531,7 +531,7 @@ var storyLine = {
         "id": "treatment",
         "title": "Treatment",
         "endOfStoryLine": true,
-        "text": "The leader looks at you and laughs. \"You are of very {height} height for a wizard\". He then notices your bite. \"We are a noble people\" he says, \"We will not endure instruction from anyone, but will freely aid those who need it. Come, let us heal you\". The village elder laid some leaves over my bitten hand. I was fed and rested for several days in the village until I had regained my strength. It was now time to discover the mystery of my campmates and escape this deadly jungle.",
+        "text": "The leader looks at you and laughs. \"You are of very {height} height for a wizard\". He then notices your bite. \"We are a noble people\" he says, \"We will not endure instruction from anyone, but will freely aid those who need it. Come, let us heal you\". The village elder lays some leaves over your bitten hand. You're fed and rested for several days in the village, until you regain your strength and give a tearful goodbye. You leave and journey on to your next adventure.",
         "image": "1030images/you_win.png",
         "choices": [
             {
