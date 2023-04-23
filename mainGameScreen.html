@@ -12,14 +12,15 @@
             /*source:  https://fonts.google.com/specimen/Pathway+Extreme */
         }
 
+        @font-face {
+        font-family: Jungle;
+        src: url('fonts/Jungle.ttf');
+        /*source:  https://fonts.google.com/specimen/Caesar+Dressing?preview.text=Jungle%20Mania&preview.text_type=custom&category=Display */
+        }
+
         body{
             font-family: 'PathwayExtreme';
         }
-
-        #topBanner {
-            padding: 5px 10px;
-        }
-
 
         .text {
             color: black;
@@ -37,25 +38,44 @@
         body {
             min-height: 100vh;
             display: flex;
-            gap: 10px;
-            background: #abc585;
+            background: #022c22;
             margin: 0;
-
             flex-direction: column;
             align-items: stretch;
         }
 
         #topBanner {
-            background-color: gray;
+            display: flex;
+        }
+
+        #topBannerLeft {
+            flex: 6;
+            font-family: Jungle;
+            color: #ecfdf5;
+            text-align: center;
+        }
+        
+        #topBannerRight {
+            flex: 4;
+            padding: 10px;
+            text-align: right;
+        }
+        
+        #topBannerRight button {
+            background-color: #6ee7b7;
+            border-radius: 15px;
+            color: black;
+            font-size: 1.5em;
+            padding: 10px;
         }
 
         #gameWrapper {
             display: flex;
-            gap: 10px;
+            gap: 20px;
             align-items: stretch;
             flex-wrap: wrap;
             flex-grow: 1;
-            background-color: #022c22;
+            padding: 20px;
         }
 
         #leftCol {
@@ -72,11 +92,12 @@
 
         #imageBox {
             flex-grow: 1;
+            margin-top: 20px;
         }
 
         #imageBox>img {
             width: 100%;
-            object-fit: cover;
+            object-fit: contain;
         }
 
         #descriptionBox {
@@ -104,9 +125,10 @@
         }
 
         .choice button {
-            background-color: white;
+            background-color: #ecfdf5;
             border-radius: 15px;
             font-size: 20px;
+            color: #047857;
             
             /* Reused Corey's scale effect for hovering over the button */
             transition: 400ms ease-in-out;
@@ -193,20 +215,40 @@
             object-fit: contain;
         }
 
+        #timerBox {
+            border-radius: 25px;
+            background-color:#064e3b;
+        }
+
         #timeLeft{
             display: flex;
             justify-content: center;
             font-size: 3em;
             margin: 0px;
-            background-color:#064e3b;
             color: white;
+        }
+
+        #barBackground {
+            background-color: #ecfdf5;
+            height: 25px;
             border-radius: 25px;
+        }
+
+        #barFill {
+            background-color: #34d399;
+            height: 25px;
+            border-radius: 25px;
+            width: 0%;
         }
     </style>
     </head>
     <body>
         <div id="topBanner">
-            <button onclick="showPopup()">NoteBook</button>
+            <div id="topBannerLeft">
+                <h1>Jungle Mania</h1>
+            </div>
+            <div id="topBannerRight">
+                <button onclick="showPopup()">&#128221 NoteBook</button>
             <div class="popup" id="popup">
                 <h2>Notebook</h2>
                 <textarea id="note-input" placeholder="Write your note here..."></textarea>
@@ -214,7 +256,7 @@
                 <ul id="notes-list"></ul>
                 <button onclick="hidePopup()">Close Popup</button>
             </div>
-            <button id="open-accessibility-panel">Accessibility</button>
+            <button id="open-accessibility-panel">&#127757 Accessibility</button>
 
             <div id="accessibility-panel" style="display: none;">
                 <h2>Accessibility Options</h2>
@@ -232,7 +274,8 @@
                 </select>
                 <button id="close-accessibility-panel">Close</button>
             </div>
-            <button onclick="reset()">reset</button>
+            </div>
+            
         </div>
 
         <div id="gameWrapper" class="text">
@@ -241,6 +284,9 @@
 
                 <div id="timerBox" class="test">
                     <p id="timeLeft"></p>
+                    <div id="barBackground">
+                        <div id="barFill"></div>
+                    </div>
                 </div>
     
                 <div id="imageBox" class="test">
@@ -272,14 +318,6 @@
             // game logic
             storyLine = personalize(storyLine, sessionStorage.getItem("playerName"), sessionStorage.getItem("playerHairColour"), sessionStorage.getItem("playerHeight"));
             setUpScene();
-
-            function reset() {
-                sceneID = "start";
-                sessionStorage.setItem('sceneID',sceneID);
-                sessionStorage.setItem('playerAlive',true);
-                sessionStorage.setItem('causeOfDeath',null);
-                setUpScene();
-            }
 
             function setUpScene() {
                 sceneID = sessionStorage.getItem('sceneID');
@@ -404,7 +442,7 @@
                     choiceDiv.classList.add("choice");
                     let button = document.createElement("button");
                     button.type = "button";
-                    button.innerHTML = element.emoji + "    " + element.text;
+                    button.innerHTML = element.emoji + "    <b>" + element.text + "</b>";
                     button.onclick = buttonClick;
                     button.choiceNumber = index;
                     choiceDiv.appendChild(button);
@@ -424,6 +462,7 @@
             // timer logic
             //timer related variables and event listener
             window.addEventListener('load', startTimer);
+            var initialTimeLeft;
             var timeLeft;
             var timer;
 
@@ -434,15 +473,19 @@
 
                 switch(difficulty) {
                     case "normal":
+                        initialTimeLeft = 300;
                         timeLeft = 300;
                         break;
                     case "hard":
+                        initialTimeLeft = 150;
                         timeLeft = 150;
                         break;
                     case "vhard":
+                        initialTimeLeft = 60;
                         timeLeft = 60;
                         break;
                     default:
+                        initialTimeLeft = 300;
                         timeLeft = 300;
                 }
                 return timeLeft;
@@ -457,6 +500,13 @@
                 document.getElementById('timeLeft').innerHTML = minutes + ":" + seconds;
             }
 
+            function displayTimeBar() {
+                barFill = document.getElementById("barFill");
+
+                percentFill = 100 - ((timeLeft / initialTimeLeft) * 100);
+                barFill.style.width = percentFill + "%";
+            }
+
             function startTimer() {
                 timeLeft = getInitialTime();
                 displayTime();
@@ -469,6 +519,7 @@
                 if (timeLeft>0) {
                     timeLeft--;
                     displayTime();
+                    displayTimeBar();
                 } else {
                     clearInterval(timer);
                     document.getElementById('timeLeft').innerHTML = 'Time Up';
