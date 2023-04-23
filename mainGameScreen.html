@@ -6,140 +6,96 @@
         <script type="text/javascript" src="storyData.js"></script>
 
         <style>
-        @font-face {
-            font-family: PathwayExtreme;
-            src: url('fonts/PathwayExtreme.ttf');
-            /*source:  https://fonts.google.com/specimen/Pathway+Extreme */
-        }
+            .text {
+                color: black;
+            }
 
-        @font-face {
-        font-family: Jungle;
-        src: url('fonts/Jungle.ttf');
-        /*source:  https://fonts.google.com/specimen/Caesar+Dressing?preview.text=Jungle%20Mania&preview.text_type=custom&category=Display */
-        }
+            .unselectable {
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
 
-        body{
-            font-family: 'PathwayExtreme';
-        }
+            body {
+                min-height: 100vh;
+                display: flex;
+                gap: 10px;
+                background: pink;
+                margin: 0;
 
-        .text {
-            color: white;
-        }
+                flex-direction: column;
+                align-items: stretch;
+            }
 
-        .unselectable {
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
+            #topBanner {
+                background-color: gray;
+            }
 
-        body {
-            min-height: 100vh;
-            display: flex;
-            background: #022c22;
-            margin: 0;
-            flex-direction: column;
-            align-items: stretch;
-        }
+            #gameWrapper{
+                display: flex;
+                gap: 10px;
+                align-items: stretch;
+                flex-wrap: wrap;
+                flex-grow: 1;
+            }
 
-        #topBanner {
-            display: flex;
-        }
+            #leftCol{
+                display: flex;
+                flex-direction: column;
+                flex: 6;
+                background-color: aquamarine;
+            }
 
-        #topBannerLeft {
-            flex: 6;
-            font-family: Jungle;
-            color: #ecfdf5;
-            text-align: center;
-        }
+            #rightCol{
+                display: flex;
+                flex-direction: column;
+                flex: 4;
+                background-color: aliceblue;
+            }
 
-        #topBannerRight {
-            flex: 4;
-            padding: 10px;
-            text-align: right;
-        }
+            #imageBox {
+                flex-grow: 1;
+                background-color: moccasin;
+            }
+            #imageBox > img {
+                width: 100%;
+                object-fit: cover;
+            }
 
-        #topBannerRight button {
-            background-color: #6ee7b7;
-            border-radius: 15px;
-            color: black;
-            font-size: 1.5em;
-            padding: 10px;
-        }
+            #descriptionBox{
+                background-color: salmon;
+                flex-grow: 1;
+                overflow: scroll;
+            }
 
-        #gameWrapper {
-            display: flex;
-            gap: 20px;
-            align-items: stretch;
-            flex-wrap: wrap;
-            flex-grow: 1;
-            padding: 20px;
-        }
+            #promptBox {
+                background-color:palegreen;
+                min-height: 200px; 
+            }
 
-        #leftCol {
-            display: flex;
-            flex-direction: column;
-            flex: 6;
-        }
+            #promptBox {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                gap: 2px;
+            }
+            .choice {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
 
-        #rightCol {
-            display: flex;
-            flex-direction: column;
-            flex: 4;
-        }
+            }
+            .choice > button {
+                
+            }
+            .choice > p {
+                
+            }
 
-        #imageBox {
-            flex-grow: 1;
-            margin-top: 20px;
-        }
-
-        #imageBox>img {
-            width: 100%;
-            object-fit: contain;
-        }
-
-        #descriptionBox {
-            padding: 10px;
-            background-color: #064e3b;
-            border-radius: 25px;
-            flex-grow: 1;
-            overflow-wrap: break-word;
-            color: white;
-        }
-
-        #promptBox {
-            min-height: 200px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            padding: 10px;
-        }
-
-        .choice {
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-
-        }
-
-        .choice button {
-            background-color: #ecfdf5;
-            border-radius: 15px;
-            font-size: 20px;
-            color: #047857;
-            
-            /* Reused Corey's scale effect for hovering over the button */
-            transition: 400ms ease-in-out;
-        }
-
-        /* Reused Corey's scale effect for hovering over the button */
-        .choice button:hover{
-            transform: scale(1.5, 1.5);
-        }
-
-        .popup {
+            .popup {
             display: none;
             position: fixed;
             top: 50%;
@@ -151,141 +107,95 @@
             box-shadow: 0px 0px 10px #aaaaaa;
             z-index: 9999;
             border-radius: 10px;
-        }
+            }
 
-        #notebook {
-            width: 300px;
-        }
+            #notebook {
+                width: 300px;
+            }
 
-        #note-input {
-            width: 100%;
-            height: 100px;
-        }
+            #note-input {
+                width: 100%;
+                height: 100px;
+            }
 
-        #notes-list {
-            list-style-type: none;
-            padding: 0;
-        }
+            #notes-list {
+                list-style-type: none;
+                padding: 0;
+            }
 
-        .note-item {
-            background-color: #f1f1f1;
-            padding: 5px;
-            margin-bottom: 5px;
-            cursor: pointer;
-        }
+            .note-item {
+                background-color: #f1f1f1;
+                padding: 5px;
+                margin-bottom: 5px;
+                cursor: pointer;
+            }
 
-        .note-item:hover {
-            background-color: #ddd;
-        }
+            .note-item:hover {
+                background-color: #ddd;
+            }
 
-        .popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-        }
+            .popup-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 1000;
+            }
 
-        .popup-content {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            z-index: 9999;
-        }
+            .popup-content {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 5px;
+                z-index: 9999;
+            }
 
-        #accessibility-panel {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            z-index: 1001;
-        }
-
-        #imageBox img {
-            height: 30em;
-            object-fit: contain;
-        }
-
-        #timerBox {
-            border-radius: 25px;
-            background-color:#064e3b;
-        }
-
-        #timeLeft{
-            display: flex;
-            justify-content: center;
-            font-size: 3em;
-            margin: 0px;
-            color: white;
-        }
-
-        #barBackground {
-            background-color: #ecfdf5;
-            height: 25px;
-            border-radius: 25px;
-        }
-
-        #barFill {
-            background-color: #34d399;
-            height: 25px;
-            border-radius: 25px;
-            width: 0%;
-        }
-    </style>
+            #accessibility-panel {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 5px;
+                z-index: 1001;
+            }
+        </style>
     </head>
     <body>
         <div id="topBanner">
-            <div id="topBannerLeft">
-                <h1>Jungle Mania</h1>
+            <button onclick="showPopup()">NoteBook</button>
+            <div class="popup" id="popup">
+                <h2>Notebook</h2>
+                <textarea id="note-input" placeholder="Write your note here..."></textarea>
+                <button id="save-note-button">Save Note</button>
+                <ul id="notes-list"></ul>
+                <button onclick="hidePopup()">Close Popup</button>
             </div>
-            <div id="topBannerRight">
-                <button onclick="showPopup()">&#128221 NoteBook</button>
-                <div class="popup" id="popup">
-                    <h2>Notebook</h2>
-                    <textarea id="note-input" placeholder="Write your note here..."></textarea>
-                    <button id="save-note-button">Save Note</button>
-                    <ul id="notes-list"></ul>
-                    <button onclick="hidePopup()">Close Popup</button>
-                </div>
-                <button id="open-accessibility-panel">&#127757 Accessibility</button>
-                <div class="popup" id="popup">
-                    <h2>Notebook</h2>
-                    <textarea id="note-input" placeholder="Write your note here..."></textarea>
-                    <button id="save-note-button">Save Note</button>
-                    <ul id="notes-list"></ul>
-                    <button onclick="hidePopup()">Close Popup</button>
-                </div>
-                <button id="open-accessibility-panel">&#127757 Accessibility</button>
+            <button id="open-accessibility-panel">Accessibility</button>
 
-                <div id="accessibility-panel" style="display: none;">
-                    <h2>Accessibility Options</h2>
-                    <label for="text-size">Text Size:</label>
-                    <input type="range" id="text-size" min="14" max="24" value="16">
-                    <label for="text-color">Text Color:</label>
-                    <input type="color" id="text-color" value="#000000">
-                    <label for="background-color">Background Color:</label>
-                    <input type="color" id="background-color" value="#808080">
-                    <label for="font-select">Font:</label>
-                    <select id="font-select">
-                        <option value="Arial">Arial</option>
-                        <option value="Verdana">Verdana</option>
-                        <option value="OpenDyslexic">OpenDyslexic</option>
-                    </select>
-                    <button id="close-accessibility-panel">Close</button>
-                </div>
-                <button id="startMusicButton">&#127925 Start Music</button>
-                <audio id="backgroundMusic" src="Chee Zee Jungle.mp3" preload="auto" loop></audio>
+            <div id="accessibility-panel" style="display: none;">
+                <h2>Accessibility Options</h2>
+                <label for="text-size">Text Size:</label>
+                <input type="range" id="text-size" min="14" max="24" value="16">
+                <label for="text-color">Text Color:</label>
+                <input type="color" id="text-color" value="#000000">
+                <label for="background-color">Background Color:</label>
+                <input type="color" id="background-color" value="#808080">
+                <label for="font-select">Font:</label>
+                <select id="font-select">
+                    <option value="Arial">Arial</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="OpenDyslexic">OpenDyslexic</option>
+                </select>
+                <button id="close-accessibility-panel">Close</button>
             </div>
-            
+            <button onclick="reset()">reset</button>
         </div>
 
         <div id="gameWrapper" class="text">
@@ -293,20 +203,19 @@
             <div id="leftCol">
 
                 <div id="timerBox" class="test">
+                    <h1>timerBox</h1>
                     <p id="timeLeft"></p>
-                    <div id="barBackground">
-                        <div id="barFill"></div>
-                    </div>
                 </div>
     
                 <div id="imageBox" class="test">
+                    <h1>imageBox</h1>
                     <img src="" alt="" id="sceneImage">
                 </div>
             </div>
 
             <div id="rightCol">
                 <div id="descriptionBox"  class="test">
-                    <h1 id="sceneTitle"></h1>
+                    <h1>descriptionBox</h1>
                     <div id="sceneTextLocation"></div>
                 </div>
 
@@ -326,35 +235,31 @@
             // sessionStorage.getItem('playerHeight');
 
             // game logic
-            storyLine = personalize(storyLine, sessionStorage.getItem("playerName"), sessionStorage.getItem("playerHairColour"), sessionStorage.getItem("playerHeight"));
             setUpScene();
+
+            function reset() {
+                sceneID = "start";
+                sessionStorage.setItem('sceneID',sceneID);
+                setUpScene();
+            }
 
             function setUpScene() {
                 sceneID = sessionStorage.getItem('sceneID');
+                if (sceneID === null) {
+                    sceneID = "start";
+                    sessionStorage.setItem('sceneID',sceneID);
+                }
                 sceneDict = storyLine[sceneID];
+                console.log(sceneDict);
                 if (sceneDict === undefined) {
                     if (sceneID == "stats") {
-                        sessionStorage.setItem("timeTaken",timeLeft);
-                        window.open('stats.html','_self');
+                        //go to stats page
                     }
                     else {
                         alert("You've reached a dead-end in the story! Let us know how you found it.")
                     }
                 }
                 else {
-                    if (sceneDict["causeOfDeath"]) {
-                        sessionStorage.setItem('causeOfDeath',sceneDict["causeOfDeath"]);
-                        sessionStorage.setItem('playerAlive',false);
-
-
-                    
-                    }
-                    if (sceneDict["endOfStoryLine"]) {
-                        completionDict = JSON.parse(sessionStorage.getItem('completionDict'));
-
-                        completionDict[sceneID] = true;
-                        sessionStorage.setItem('completionDict',JSON.stringify(completionDict));
-                    }
                     setElementsOnPage(sceneDict);
                     checkEndOfStoryLine();
                 }
@@ -367,9 +272,6 @@
                 //set image
                 updateImage(sceneDict);
 
-                //set scene title
-                updateSceneTitle(sceneDict);
-
                 //set description
                 updateText(sceneDict);
 
@@ -380,14 +282,18 @@
             }
 
             async function buttonClick(event){
+                console.log(event.target.choiceNumber);
                 choiceNumber = event.target.choiceNumber;
+                console.log("a button was clicked");
 
                 sceneID = sessionStorage.getItem('sceneID');
 
                 sceneDict = storyLine[sceneID];
+                console.log(sceneDict);
                 choices = sceneDict.choices;
 
                 choice = choices[choiceNumber];
+                console.log(choice);
                 next = choice.next;
                 if (Array.isArray(next)) {
                     //run API here]
@@ -405,8 +311,6 @@
                 scene_number += 1;
                 promptBox = document.getElementById("promptBox");
                 promptBox.innerHTML = null;
-                sceneText = document.getElementById("sceneTitle");
-                sceneText.innerHTML = null;
                 sceneText = document.getElementById("sceneTextLocation");
                 sceneText.innerHTML = null;
             }
@@ -417,27 +321,23 @@
                 document.getElementById("sceneImage").src = imgPath;
             }
 
-            function updateSceneTitle(sceneDict) {
-                sceneTitle = sceneDict.title;
-                document.getElementById("sceneTitle").innerHTML = sceneTitle;
-            }
-
             async function updateText(sceneDict) {
                 text = sceneDict.text;
                 // Clicking a choice button too fast caused multiple typewriter effects
                 // simultateously - hence a new sceneText element is now created
                 // every time.
-
-                var scene_text_name = "sceneText" + scene_number; 
-
-                var descriptionBox = document.getElementById("descriptionBox"); 
+                scene_text_name = "sceneText" + scene_number;
+                background_color = window.getComputedStyle(document.body).getPropertyValue('background-color');
+                document.getElementById("sceneTextLocation").innerHTML += "<p class=\"unselectable\" style=\"color:" + background_color + ";\" id=" + scene_text_name +"></p>";
 
                 if (Array.isArray(text)) {
                     text = await pickRandomFromList(text);
-
+                    
                 }
 
-                document.getElementById("sceneTextLocation").innerHTML = text;
+                document.getElementById(scene_text_name).innerHTML = text;
+
+                typeWriter(scene_text_name, speed=9);
             }
 
             function updatePrompts(sceneDict) {
@@ -449,10 +349,14 @@
                     choiceDiv.classList.add("choice");
                     let button = document.createElement("button");
                     button.type = "button";
-                    button.innerHTML = element.emoji + "    " + element.text;
+                    button.innerHTML = element.emoji;
                     button.onclick = buttonClick;
                     button.choiceNumber = index;
+                    console.log(element.emoji);
                     choiceDiv.appendChild(button);
+                    let choiceText = document.createElement("p");
+                    choiceText.innerHTML = element.text;
+                    choiceDiv.appendChild(choiceText);
                     promptBox.appendChild(choiceDiv);
                 });
             }
@@ -461,6 +365,7 @@
                 //switch statement to check if a story line end has been reached
                 //then setting it so it's known it's been reached for the stats
                 completionDict = JSON.parse(sessionStorage.getItem('completionDict'));
+                console.log(completionDict);
 
 
                 
@@ -469,9 +374,8 @@
             // timer logic
             //timer related variables and event listener
             window.addEventListener('load', startTimer);
-            var initialTimeLeft;
-            var timeLeft;
-            var timer;
+            var timeLeft = 60; //default amount
+            var timer
 
             //timer methods
 
@@ -479,58 +383,36 @@
                 difficulty = sessionStorage.getItem('difficulty');
 
                 switch(difficulty) {
-                    case "normal":
-                        initialTimeLeft = 300;
-                        timeLeft = 300;
+                    case "easy":
+                        timeLeft = 240;
+                        break;
+                    case "medium":
+                        timeLeft = 120;
                         break;
                     case "hard":
-                        initialTimeLeft = 150;
-                        timeLeft = 150;
-                        break;
-                    case "vhard":
-                        initialTimeLeft = 60;  
-                        timeLeft = 60;
+                        timeLeft = 45
                         break;
                     default:
-                        initialTimeLeft = 300;
-                        timeLeft = 300;
+                        timeLeft = 120;
                 }
                 return timeLeft;
             }
 
-            function displayTime() {
-                var minutes = ~~(timeLeft / 60); // Bit-wise operators make it the whole quotient of the division
-                var seconds = timeLeft % 60;
-                if (seconds < 10) {
-                    seconds = "0" + seconds; // Ensures consistent formatting
-                }
-                document.getElementById('timeLeft').innerHTML = minutes + ":" + seconds;
-            }
-
-            function displayTimeBar() {
-                barFill = document.getElementById("barFill");
-
-                percentFill = 100 - ((timeLeft / initialTimeLeft) * 100);
-                barFill.style.width = percentFill + "%";
-            }
-
             function startTimer() {
                 timeLeft = getInitialTime();
-                displayTime();
+                document.getElementById('timeLeft').innerHTML = timeLeft;
                 timer = setInterval(decreaseTime, 1000);
                 sessionStorage.setItem('ranOutOfTime',false);
 
             }
 
             function decreaseTime() {
-                if (timeLeft > 0) {
+                if (timeLeft>0) {
                     timeLeft--;
-                    displayTime();
-                    displayTimeBar();
+                    document.getElementById('timeLeft').innerHTML = timeLeft;
                 } else {
                     clearInterval(timer);
                     document.getElementById('timeLeft').innerHTML = 'Time Up';
-                   
                     //add method here to be taken to end screen with indication that time ran out.
                     sessionStorage.setItem('ranOutOfTime',true);
                     sessionStorage.setItem("sceneID","ranOutOfTime");
@@ -558,20 +440,24 @@
             }
 
             async function pickRandomFromList(myList) {
-                console.log("in the API bit")
                 listLength = myList.length;//myList.length();
+                console.log("length of array: "+listLength);
                 url = "http://andymcdowell.hosting.hal.davecutting.uk/1030_APIs/diceRollWithInputs.php";
                 qStr = "?diceFaceNumber=" + listLength + "&diceNumber=1"; //reducing by 1 so that it is the list index
                 APIResponse = await fetchURL(url+qStr);
+                console.log(APIResponse);
                 randomPos = APIResponse[0]["result"]; //this API returns random numbers in a list so extract the value
-                console.log("random pos: " + randomPos);
+                console.log(randomPos);
                 return myList[randomPos-1];
             }
 
             async function pickHeadsOrTails(myList) {
                 url = "http://andymcdowell.hosting.hal.davecutting.uk/1030_APIs/coinFlip.php";
                 APIResponse = await fetchURL(url);
+                console.log("api response from heads and tails:")
+                console.log(APIResponse);
                 HeadsOrTails = APIResponse["coinFlip"]
+                console.log("Head or tails result "+HeadsOrTails);
                 if (HeadsOrTails == "Heads") {
                     index = 0;
                 } else {
@@ -580,11 +466,6 @@
                 return myList[index];
             }
 
-            document.getElementById('startMusicButton').addEventListener('click', playBackgroundMusic);
-            function playBackgroundMusic() {
-                const backgroundMusic = document.getElementById('backgroundMusic');
-                backgroundMusic.play();
-            }
         </script>
 
     </body>
