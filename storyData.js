@@ -416,7 +416,7 @@ var storyLine = {
             {
                 "text": "Take the berries",
                 "emoji": "&#127815;",
-                "next": "berriesEaten"
+                "next": "berries"
             },
             {
                 "text": "Continue towards the village",
@@ -430,7 +430,7 @@ var storyLine = {
         "title": "The Berrie Bush",
         "endOfStoryLine": false,
         "text": "You carefully avoid the thorns and pick a few. The berries look delicious, more delicious than any berries you've ever seen, bright red and glossy. You feel a strong compulsion to eat them now.",
-        "image": "1030images/berries.jpg",
+        "image": "1030images/berry_bush.jpg",
         "choices": [
             {
                 "text": "Eat the berries",
@@ -438,7 +438,7 @@ var storyLine = {
                 "next": "berriesEatenDed"
             },
             {
-                "text": "No way, this is classic storybook stuff",
+                "text": "Continue towards the village",
                 "emoji": "&#128726;",
                 "next": "villageWithBerries"
             }
@@ -449,7 +449,7 @@ var storyLine = {
         "title": "Poisonous Berries",
         "endOfStoryLine": true,
         "causeOfDeath" : "Delicious berries",
-        "text": "You eat the berries. They're divine. You have some more. Soon the bush is completely bare. You wait a while, and are honestly surprized they didn't poison you after all. Revitalized by such a healthy snack, you continue on.",
+        "text": "You eat the berries. They're divine. You have some more. Soon the bush is completely bare. Revitalized by such a healthy snack, you continue on. However after a while you become drousy and fall into a sleep which you never wake back up from.",
         "image": "1030images/Game_over.png",
         "choices": [
             {
