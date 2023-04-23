@@ -129,7 +129,7 @@ var storyLine = {
                 "next": "exploringBehindWaterfall"
             },
             {
-                "text": "Create a raft and float down the river",
+                "text": "Create a raft",
                 "emoji": "&#128758;",
                 "next": "confusedRaftBuilder"
             },

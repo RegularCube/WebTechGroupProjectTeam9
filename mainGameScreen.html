@@ -16,16 +16,6 @@
             font-family: 'PathwayExtreme';
         }
 
-        #gameWrapper {
-            margin: 10px;
-        }
-
-        #rightCol>*,
-        #leftCol>* {
-            padding-left: 10px;
-            border: 4px solid black;
-        }
-
         #topBanner {
             padding: 5px 10px;
         }
@@ -65,26 +55,23 @@
             align-items: stretch;
             flex-wrap: wrap;
             flex-grow: 1;
+            background-color: #022c22;
         }
 
         #leftCol {
             display: flex;
             flex-direction: column;
             flex: 6;
-            background-color: #2f723e;
         }
 
         #rightCol {
             display: flex;
             flex-direction: column;
             flex: 4;
-            background-color: aliceblue;
         }
 
         #imageBox {
             flex-grow: 1;
-            background-color: #94574c;
-            border-top: 2px;
         }
 
         #imageBox>img {
@@ -93,22 +80,20 @@
         }
 
         #descriptionBox {
-            background-color: #fff7b6;
+            padding: 10px;
+            background-color: #064e3b;
+            border-radius: 25px;
             flex-grow: 1;
             overflow-wrap: break-word;
+            color: white;
         }
 
         #promptBox {
-            background-color: #b48a57;
             min-height: 200px;
-            border-top: 2px;
-        }
-
-        #promptBox {
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-            gap: 2px;
+            padding: 10px;
         }
 
         .choice {
@@ -118,9 +103,19 @@
 
         }
 
-        .choice>button {}
+        .choice button {
+            background-color: white;
+            border-radius: 15px;
+            font-size: 20px;
+            
+            /* Reused Corey's scale effect for hovering over the button */
+            transition: 400ms ease-in-out;
+        }
 
-        .choice>p {}
+        /* Reused Corey's scale effect for hovering over the button */
+        .choice button:hover{
+            transform: scale(1.5, 1.5);
+        }
 
         .popup {
             display: none;
@@ -203,6 +198,9 @@
             justify-content: center;
             font-size: 3em;
             margin: 0px;
+            background-color:#064e3b;
+            color: white;
+            border-radius: 25px;
         }
     </style>
     </head>
@@ -406,13 +404,10 @@
                     choiceDiv.classList.add("choice");
                     let button = document.createElement("button");
                     button.type = "button";
-                    button.innerHTML = element.emoji;
+                    button.innerHTML = element.emoji + "    " + element.text;
                     button.onclick = buttonClick;
                     button.choiceNumber = index;
                     choiceDiv.appendChild(button);
-                    let choiceText = document.createElement("p");
-                    choiceText.innerHTML = element.text;
-                    choiceDiv.appendChild(choiceText);
                     promptBox.appendChild(choiceDiv);
                 });
             }
