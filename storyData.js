@@ -202,7 +202,7 @@ var storyLine = {
         "id": "fishing",
         "title": "Fishing",
         "endOfStoryLine": false,
-        "text": [
+        "text": [["2","4","h","f"],
             "You try to lasso the fish but throw it way too far. The fish smiles at you.",
             "You throw the lasso near the fish, but the fish is bigger that the loop. You loosen it up a bit.",
             "You throw the lasso at the fish, but it's too slippery to stay in the loop. You reflect that lassoing is not a fishing technique you've heard of anyone using.",
