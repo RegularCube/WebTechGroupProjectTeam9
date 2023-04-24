@@ -91,16 +91,3 @@ textSizeInput.addEventListener('input', applyAccessibilityOptions);
 textColorInput.addEventListener('input', applyAccessibilityOptions);
 backgroundColorInput.addEventListener('input', applyAccessibilityOptions);
 fontSelect.addEventListener('change', applyAccessibilityOptions);
-
- document.getElementById("headsortailscoinflip").addEventListener("click", async function () {
-      const myList = ['heads', 'tails'];
-      const result = await pickHeadsOrTails(myList);
-      document.getElementById("headsOrTailsResult").innerText = `The coin flip is: ${result}`;
-      setTimeout(() => {
-        document.getElementById("headsOrTailsResult").innerText = "";
-    }, 2000);
-    });
-
-
-
-
